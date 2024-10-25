@@ -1,0 +1,12 @@
+pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
+plugins { id("com.facebook.react.settings") }
+extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
+rootProject.name = 'GarageApp'
+include ':app'
+includeBuild('../node_modules/@react-native/gradle-plugin')
+include ':react-native-fused-location'
+project(':react-native-fused-location').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fused-location/android')
+
+
+
+

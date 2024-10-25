@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.garageapp-mergeDebugResources-36:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\koron\\.gradle\\caches\\8.8\\transforms\\130231ccae0e1b5fee1583a7cd442c56\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

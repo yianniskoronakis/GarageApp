@@ -1,0 +1,750 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:1:1-43:12
+MERGED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml:2:1-9:12
+INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml:2:1-9:12
+INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-gesture-handler] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-safe-area-context] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-screens] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-async-storage_async-storage] C:\Users\koron\Desktop\App\GarageApp\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-community_geolocation] C:\Users\koron\Desktop\App\GarageApp\node_modules\@react-native-community\geolocation\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-fused-location] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-fused-location\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-geolocation-service] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-geolocation-service\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-get-location] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-get-location\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-19:12
+MERGED from [:react-native-maps] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-maps\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-permissions] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-permissions\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-svg] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-vector-icons] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\d65948972c8a208396465c700b9897d5\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\52878fa335c93a72df2769408b74cdfa\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\ae2a76325ce7b6bca0d276897276276d\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\130231ccae0e1b5fee1583a7cd442c56\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\6fe5376cfc060a8596bd35974b0fa5f5\transformed\jetified-imagepipeline-okhttp3-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\322a3618ecddb98350c38371a2086546\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] C:\Users\koron\.gradle\caches\8.8\transforms\85130bb20a275fc4de35cc7049dcc36f\transformed\jetified-android-maps-utils-3.8.2\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-base:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\56fea15e0fd0849845183e2c684c73f8\transformed\jetified-play-services-base-18.2.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\koron\.gradle\caches\8.8\transforms\bb06cb11d8c46ac2071a955965de0604\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c5014a514793b764307582c6a8ebac41\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\722d21a42346aa7bc3258161a9af4694\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\koron\.gradle\caches\8.8\transforms\69935126f7a3b75dc16c24245aaa8841\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\koron\.gradle\caches\8.8\transforms\3ef660a0cf2fb6a570afb23de8f6b885\transformed\jetified-activity-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\316ab533fb90adc4d3af476a82dd13e6\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\bcf669dad1ec237a98f4db3c9f8f55a1\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\3bfb640354c257ed8feb794b01854dc0\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\2c99eb2a07df83595fab180d874a2dc6\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\b7deacf7bfad1f43bcbae270b4bee60b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\06470a422306a7a7c5a02e5ec91437b1\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:fresco:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\5e23572d1038b253622dbb12b68bea2b\transformed\jetified-fresco-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:drawee:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\75c2060d30ba324a63893212b164d9b5\transformed\jetified-drawee-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:nativeimagefilters:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\93535f9f6775c1e8764eccca9c9132f9\transformed\jetified-nativeimagefilters-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:memory-type-native:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\2b0f35f7265f0cc0d85e120834bbeb9a\transformed\jetified-memory-type-native-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:memory-type-java:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\ed0c2a919e3a562fdcbd76f9cb708f3f\transformed\jetified-memory-type-java-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:imagepipeline-native:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\42fe6e392f7932a14b591f7f7fc9e979\transformed\jetified-imagepipeline-native-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\14ea294211b0708a071fa153878198d4\transformed\jetified-memory-type-ashmem-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:imagepipeline:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4e9991a2a7223c09bd369fca19c41f85\transformed\jetified-imagepipeline-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\8f4219286a162aad2248da06f78cc523\transformed\jetified-nativeimagetranscoder-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:imagepipeline-base:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\16efd5cf8515a97fb188ba4684a78eab\transformed\jetified-imagepipeline-base-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:middleware:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\21ee48b477498e98a00e9e56592a1dd2\transformed\jetified-middleware-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:ui-common:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\be959b32cd27e0339b282a6afb1057ab\transformed\jetified-ui-common-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:soloader:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\361eddaf781160410e23713a5907b912\transformed\jetified-soloader-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fresco:fbcore:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\26b7a32dfe31d5a2c5f86361e1058c80\transformed\jetified-fbcore-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.react:hermes-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\bb1f688ada1ef2f98e0dee85bc7608d3\transformed\jetified-hermes-android-0.75.3-debug\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\koron\.gradle\caches\8.8\transforms\2530d3b3a0333267489017a9971e7f31\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce191da19e393cbf3a9d500f9654db61\transformed\coordinatorlayout-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\fa403549b01681019423a6e7c29c3397\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:17:1-145:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4745a2d1d283bb3f91feaa8d80c3fbe3\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4e20d92b444a196a96ca978a1446a2e8\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\525a38b737d7bdf249a2cd4ce168e643\transformed\jetified-tracing-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\koron\.gradle\caches\8.8\transforms\f68bb41df940d3a4482ac54526cc99d1\transformed\room-runtime-2.2.5\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\b90b6371b9b2b5523d5fed67e9a1e57d\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\9a74afa5f56eb135cfeeff14faff402d\transformed\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\7ed7218571b2587f7883b44d9b8984f2\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\6111c2a5a993da9bacc97d3083f4a100\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\386e87a8397da3b8b251d3b0d49488f5\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\afd84d4ec2f0a119efac2727f4a2a220\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\82a1201865be0bd9b4f0cbd2c37f272d\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\557e094a4588a9346c23901c518afdb9\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\3a2dbb78d98a171931104a5d896f4c03\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\109b39787763c6efaed65f71c0c28421\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\e4c0ff7bcd72490ee114c77224d0147c\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4280b70c4f6002bac7e0b8a7a66ddffe\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\9caa15394303e5397f74beb4742f05d3\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\71e0474d64c42860dc1ef16959d3c9e9\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\0db9d323f711430c51f2827b397568f0\transformed\jetified-lifecycle-service-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\e5b597d2f15c4f7a40bb623b2a06b8da\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\3fcdc94ced68cb846b9c9b40f5f608a9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c225de367529e62755f8adb113b38d2b\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\3282354c779ba9cc970dcb2a10efc89f\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\77d6b05aa57b996f55416ada48e5ed03\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\0568b371b04fa5e9e0fc36aa62002834\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\92f2b0d5f33726910b03a5a02e0ea94a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\e464275f1d3aba45ce179d350db7320e\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\koron\.gradle\caches\8.8\transforms\27aa23c6fbfeada0537e1ae2bba664ea\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fbjni:fbjni:0.6.0] C:\Users\koron\.gradle\caches\8.8\transforms\947c2b4716145b0043214e7a3e8e3d94\transformed\jetified-fbjni-0.6.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.soloader:soloader:0.11.0] C:\Users\koron\.gradle\caches\8.8\transforms\f8303fa96cdd76b93cd23fc565358d05\transformed\jetified-soloader-0.11.0\AndroidManifest.xml:2:1-17:12
+	package
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:2:5-51
+	android:versionCode
+		INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:9:5-104
+	tools:node
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:9:83-101
+	android:name
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:9:22-82
+application
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:12:5-42:19
+MERGED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:12:5-42:19
+MERGED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:12:5-42:19
+INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml:5:5-8:50
+MERGED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-17:19
+MERGED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-17:19
+MERGED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:18:5-22:19
+MERGED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:18:5-22:19
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\d65948972c8a208396465c700b9897d5\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\d65948972c8a208396465c700b9897d5\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\ae2a76325ce7b6bca0d276897276276d\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\ae2a76325ce7b6bca0d276897276276d\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\322a3618ecddb98350c38371a2086546\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\322a3618ecddb98350c38371a2086546\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] C:\Users\koron\.gradle\caches\8.8\transforms\85130bb20a275fc4de35cc7049dcc36f\transformed\jetified-android-maps-utils-3.8.2\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] C:\Users\koron\.gradle\caches\8.8\transforms\85130bb20a275fc4de35cc7049dcc36f\transformed\jetified-android-maps-utils-3.8.2\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-base:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\56fea15e0fd0849845183e2c684c73f8\transformed\jetified-play-services-base-18.2.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\56fea15e0fd0849845183e2c684c73f8\transformed\jetified-play-services-base-18.2.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\koron\.gradle\caches\8.8\transforms\bb06cb11d8c46ac2071a955965de0604\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\koron\.gradle\caches\8.8\transforms\bb06cb11d8c46ac2071a955965de0604\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c5014a514793b764307582c6a8ebac41\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c5014a514793b764307582c6a8ebac41\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:30:5-143:19
+MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:30:5-143:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4e20d92b444a196a96ca978a1446a2e8\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4e20d92b444a196a96ca978a1446a2e8\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\koron\.gradle\caches\8.8\transforms\f68bb41df940d3a4482ac54526cc99d1\transformed\room-runtime-2.2.5\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\koron\.gradle\caches\8.8\transforms\f68bb41df940d3a4482ac54526cc99d1\transformed\room-runtime-2.2.5\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4280b70c4f6002bac7e0b8a7a66ddffe\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4280b70c4f6002bac7e0b8a7a66ddffe\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.facebook.soloader:soloader:0.11.0] C:\Users\koron\.gradle\caches\8.8\transforms\f8303fa96cdd76b93cd23fc565358d05\transformed\jetified-soloader-0.11.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.facebook.soloader:soloader:0.11.0] C:\Users\koron\.gradle\caches\8.8\transforms\f8303fa96cdd76b93cd23fc565358d05\transformed\jetified-soloader-0.11.0\AndroidManifest.xml:11:5-15:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:19:9-35
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:19:9-35
+	android:label
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:14:9-41
+	tools:ignore
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml:8:9-48
+	android:roundIcon
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:16:9-54
+	tools:targetApi
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml:7:9-29
+	android:icon
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:15:9-39
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:15:9-39
+	android:allowBackup
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:17:9-36
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:17:9-36
+	android:theme
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:18:9-40
+	android:usesCleartextTraffic
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml:6:9-44
+	android:name
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:13:9-40
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:22:9-24:71
+	android:value
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:24:13-68
+	android:name
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:23:13-58
+activity#com.garageapp.MainActivity
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:27:9-40:20
+	android:label
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:29:13-45
+	android:launchMode
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:31:13-44
+	android:windowSoftInputMode
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:32:13-55
+	android:exported
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:33:13-36
+	android:configChanges
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:30:13-122
+	android:name
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:28:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:36:13-39:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:38:17-77
+	android:name
+		ADDED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\main\AndroidManifest.xml:38:27-74
+uses-sdk
+INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml
+MERGED from [:react-native-gesture-handler] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-gesture-handler] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-safe-area-context] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-safe-area-context] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-screens] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-screens] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-async-storage_async-storage] C:\Users\koron\Desktop\App\GarageApp\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-async-storage_async-storage] C:\Users\koron\Desktop\App\GarageApp\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_geolocation] C:\Users\koron\Desktop\App\GarageApp\node_modules\@react-native-community\geolocation\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_geolocation] C:\Users\koron\Desktop\App\GarageApp\node_modules\@react-native-community\geolocation\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-fused-location] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-fused-location\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-fused-location] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-fused-location\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-geolocation-service] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-geolocation-service\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-geolocation-service] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-geolocation-service\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-get-location] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-get-location\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-get-location] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-get-location\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-maps] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-maps\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-maps] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-maps\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-permissions] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-permissions\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-permissions] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-permissions\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-svg] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-svg] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-vector-icons] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-vector-icons] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:10:5-44
+MERGED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:10:5-44
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\d65948972c8a208396465c700b9897d5\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\d65948972c8a208396465c700b9897d5\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\52878fa335c93a72df2769408b74cdfa\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\52878fa335c93a72df2769408b74cdfa\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\ae2a76325ce7b6bca0d276897276276d\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\ae2a76325ce7b6bca0d276897276276d\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\130231ccae0e1b5fee1583a7cd442c56\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\koron\.gradle\caches\8.8\transforms\130231ccae0e1b5fee1583a7cd442c56\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\6fe5376cfc060a8596bd35974b0fa5f5\transformed\jetified-imagepipeline-okhttp3-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\6fe5376cfc060a8596bd35974b0fa5f5\transformed\jetified-imagepipeline-okhttp3-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\322a3618ecddb98350c38371a2086546\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\koron\.gradle\caches\8.8\transforms\322a3618ecddb98350c38371a2086546\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] C:\Users\koron\.gradle\caches\8.8\transforms\85130bb20a275fc4de35cc7049dcc36f\transformed\jetified-android-maps-utils-3.8.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] C:\Users\koron\.gradle\caches\8.8\transforms\85130bb20a275fc4de35cc7049dcc36f\transformed\jetified-android-maps-utils-3.8.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\56fea15e0fd0849845183e2c684c73f8\transformed\jetified-play-services-base-18.2.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\56fea15e0fd0849845183e2c684c73f8\transformed\jetified-play-services-base-18.2.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\koron\.gradle\caches\8.8\transforms\bb06cb11d8c46ac2071a955965de0604\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\koron\.gradle\caches\8.8\transforms\bb06cb11d8c46ac2071a955965de0604\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c5014a514793b764307582c6a8ebac41\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c5014a514793b764307582c6a8ebac41\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\722d21a42346aa7bc3258161a9af4694\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\722d21a42346aa7bc3258161a9af4694\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\koron\.gradle\caches\8.8\transforms\69935126f7a3b75dc16c24245aaa8841\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\koron\.gradle\caches\8.8\transforms\69935126f7a3b75dc16c24245aaa8841\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\koron\.gradle\caches\8.8\transforms\3ef660a0cf2fb6a570afb23de8f6b885\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\koron\.gradle\caches\8.8\transforms\3ef660a0cf2fb6a570afb23de8f6b885\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\316ab533fb90adc4d3af476a82dd13e6\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\316ab533fb90adc4d3af476a82dd13e6\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\bcf669dad1ec237a98f4db3c9f8f55a1\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\bcf669dad1ec237a98f4db3c9f8f55a1\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\3bfb640354c257ed8feb794b01854dc0\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\3bfb640354c257ed8feb794b01854dc0\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\2c99eb2a07df83595fab180d874a2dc6\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\2c99eb2a07df83595fab180d874a2dc6\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\b7deacf7bfad1f43bcbae270b4bee60b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\b7deacf7bfad1f43bcbae270b4bee60b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\06470a422306a7a7c5a02e5ec91437b1\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\06470a422306a7a7c5a02e5ec91437b1\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:fresco:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\5e23572d1038b253622dbb12b68bea2b\transformed\jetified-fresco-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:fresco:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\5e23572d1038b253622dbb12b68bea2b\transformed\jetified-fresco-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:drawee:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\75c2060d30ba324a63893212b164d9b5\transformed\jetified-drawee-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:drawee:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\75c2060d30ba324a63893212b164d9b5\transformed\jetified-drawee-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:nativeimagefilters:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\93535f9f6775c1e8764eccca9c9132f9\transformed\jetified-nativeimagefilters-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:nativeimagefilters:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\93535f9f6775c1e8764eccca9c9132f9\transformed\jetified-nativeimagefilters-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-native:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\2b0f35f7265f0cc0d85e120834bbeb9a\transformed\jetified-memory-type-native-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-native:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\2b0f35f7265f0cc0d85e120834bbeb9a\transformed\jetified-memory-type-native-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-java:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\ed0c2a919e3a562fdcbd76f9cb708f3f\transformed\jetified-memory-type-java-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-java:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\ed0c2a919e3a562fdcbd76f9cb708f3f\transformed\jetified-memory-type-java-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-native:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\42fe6e392f7932a14b591f7f7fc9e979\transformed\jetified-imagepipeline-native-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-native:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\42fe6e392f7932a14b591f7f7fc9e979\transformed\jetified-imagepipeline-native-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-ashmem:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\14ea294211b0708a071fa153878198d4\transformed\jetified-memory-type-ashmem-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:memory-type-ashmem:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\14ea294211b0708a071fa153878198d4\transformed\jetified-memory-type-ashmem-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4e9991a2a7223c09bd369fca19c41f85\transformed\jetified-imagepipeline-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4e9991a2a7223c09bd369fca19c41f85\transformed\jetified-imagepipeline-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:nativeimagetranscoder:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\8f4219286a162aad2248da06f78cc523\transformed\jetified-nativeimagetranscoder-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:nativeimagetranscoder:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\8f4219286a162aad2248da06f78cc523\transformed\jetified-nativeimagetranscoder-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-base:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\16efd5cf8515a97fb188ba4684a78eab\transformed\jetified-imagepipeline-base-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:imagepipeline-base:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\16efd5cf8515a97fb188ba4684a78eab\transformed\jetified-imagepipeline-base-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:middleware:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\21ee48b477498e98a00e9e56592a1dd2\transformed\jetified-middleware-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:middleware:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\21ee48b477498e98a00e9e56592a1dd2\transformed\jetified-middleware-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:ui-common:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\be959b32cd27e0339b282a6afb1057ab\transformed\jetified-ui-common-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:ui-common:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\be959b32cd27e0339b282a6afb1057ab\transformed\jetified-ui-common-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:soloader:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\361eddaf781160410e23713a5907b912\transformed\jetified-soloader-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:soloader:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\361eddaf781160410e23713a5907b912\transformed\jetified-soloader-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:fbcore:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\26b7a32dfe31d5a2c5f86361e1058c80\transformed\jetified-fbcore-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fresco:fbcore:3.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\26b7a32dfe31d5a2c5f86361e1058c80\transformed\jetified-fbcore-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.react:hermes-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\bb1f688ada1ef2f98e0dee85bc7608d3\transformed\jetified-hermes-android-0.75.3-debug\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.react:hermes-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\bb1f688ada1ef2f98e0dee85bc7608d3\transformed\jetified-hermes-android-0.75.3-debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\koron\.gradle\caches\8.8\transforms\2530d3b3a0333267489017a9971e7f31\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\koron\.gradle\caches\8.8\transforms\2530d3b3a0333267489017a9971e7f31\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce191da19e393cbf3a9d500f9654db61\transformed\coordinatorlayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce191da19e393cbf3a9d500f9654db61\transformed\coordinatorlayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\fa403549b01681019423a6e7c29c3397\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\fa403549b01681019423a6e7c29c3397\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4745a2d1d283bb3f91feaa8d80c3fbe3\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4745a2d1d283bb3f91feaa8d80c3fbe3\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4e20d92b444a196a96ca978a1446a2e8\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4e20d92b444a196a96ca978a1446a2e8\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\525a38b737d7bdf249a2cd4ce168e643\transformed\jetified-tracing-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\525a38b737d7bdf249a2cd4ce168e643\transformed\jetified-tracing-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\koron\.gradle\caches\8.8\transforms\f68bb41df940d3a4482ac54526cc99d1\transformed\room-runtime-2.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\koron\.gradle\caches\8.8\transforms\f68bb41df940d3a4482ac54526cc99d1\transformed\room-runtime-2.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\b90b6371b9b2b5523d5fed67e9a1e57d\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\b90b6371b9b2b5523d5fed67e9a1e57d\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\9a74afa5f56eb135cfeeff14faff402d\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\9a74afa5f56eb135cfeeff14faff402d\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\7ed7218571b2587f7883b44d9b8984f2\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\7ed7218571b2587f7883b44d9b8984f2\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\6111c2a5a993da9bacc97d3083f4a100\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\6111c2a5a993da9bacc97d3083f4a100\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\386e87a8397da3b8b251d3b0d49488f5\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\386e87a8397da3b8b251d3b0d49488f5\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\afd84d4ec2f0a119efac2727f4a2a220\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\afd84d4ec2f0a119efac2727f4a2a220\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\82a1201865be0bd9b4f0cbd2c37f272d\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\82a1201865be0bd9b4f0cbd2c37f272d\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\557e094a4588a9346c23901c518afdb9\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\557e094a4588a9346c23901c518afdb9\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\3a2dbb78d98a171931104a5d896f4c03\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\3a2dbb78d98a171931104a5d896f4c03\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\109b39787763c6efaed65f71c0c28421\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\109b39787763c6efaed65f71c0c28421\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\e4c0ff7bcd72490ee114c77224d0147c\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\e4c0ff7bcd72490ee114c77224d0147c\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4280b70c4f6002bac7e0b8a7a66ddffe\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4280b70c4f6002bac7e0b8a7a66ddffe\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\9caa15394303e5397f74beb4742f05d3\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\9caa15394303e5397f74beb4742f05d3\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\71e0474d64c42860dc1ef16959d3c9e9\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\71e0474d64c42860dc1ef16959d3c9e9\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\0db9d323f711430c51f2827b397568f0\transformed\jetified-lifecycle-service-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\0db9d323f711430c51f2827b397568f0\transformed\jetified-lifecycle-service-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\e5b597d2f15c4f7a40bb623b2a06b8da\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\e5b597d2f15c4f7a40bb623b2a06b8da\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\3fcdc94ced68cb846b9c9b40f5f608a9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\3fcdc94ced68cb846b9c9b40f5f608a9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c225de367529e62755f8adb113b38d2b\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c225de367529e62755f8adb113b38d2b\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\3282354c779ba9cc970dcb2a10efc89f\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\koron\.gradle\caches\8.8\transforms\3282354c779ba9cc970dcb2a10efc89f\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\77d6b05aa57b996f55416ada48e5ed03\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\77d6b05aa57b996f55416ada48e5ed03\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\0568b371b04fa5e9e0fc36aa62002834\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\0568b371b04fa5e9e0fc36aa62002834\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\92f2b0d5f33726910b03a5a02e0ea94a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\92f2b0d5f33726910b03a5a02e0ea94a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\e464275f1d3aba45ce179d350db7320e\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\koron\.gradle\caches\8.8\transforms\e464275f1d3aba45ce179d350db7320e\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\koron\.gradle\caches\8.8\transforms\27aa23c6fbfeada0537e1ae2bba664ea\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\koron\.gradle\caches\8.8\transforms\27aa23c6fbfeada0537e1ae2bba664ea\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fbjni:fbjni:0.6.0] C:\Users\koron\.gradle\caches\8.8\transforms\947c2b4716145b0043214e7a3e8e3d94\transformed\jetified-fbjni-0.6.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fbjni:fbjni:0.6.0] C:\Users\koron\.gradle\caches\8.8\transforms\947c2b4716145b0043214e7a3e8e3d94\transformed\jetified-fbjni-0.6.0\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.soloader:soloader:0.11.0] C:\Users\koron\.gradle\caches\8.8\transforms\f8303fa96cdd76b93cd23fc565358d05\transformed\jetified-soloader-0.11.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.11.0] C:\Users\koron\.gradle\caches\8.8\transforms\f8303fa96cdd76b93cd23fc565358d05\transformed\jetified-soloader-0.11.0\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\koron\Desktop\App\GarageApp\android\app\src\debug\AndroidManifest.xml
+provider#com.imagepicker.ImagePickerProvider
+ADDED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-16:20
+	android:grantUriPermissions
+		ADDED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:13-47
+	android:authorities
+		ADDED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:13-71
+	android:exported
+		ADDED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-63
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:13-15:70
+	android:resource
+		ADDED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:17-67
+	android:name
+		ADDED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:14:17-67
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:16:5-78
+	android:name
+		ADDED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:16:22-75
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:20:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.maps.android:android-maps-utils:3.8.2] C:\Users\koron\.gradle\caches\8.8\transforms\85130bb20a275fc4de35cc7049dcc36f\transformed\jetified-android-maps-utils-3.8.2\AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c5014a514793b764307582c6a8ebac41\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\koron\.gradle\caches\8.8\transforms\c5014a514793b764307582c6a8ebac41\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.maps.android:android-maps-utils:3.8.2] C:\Users\koron\.gradle\caches\8.8\transforms\85130bb20a275fc4de35cc7049dcc36f\transformed\jetified-android-maps-utils-3.8.2\AndroidManifest.xml:10:13-66
+	android:name
+		ADDED from [com.google.maps.android:android-maps-utils:3.8.2] C:\Users\koron\.gradle\caches\8.8\transforms\85130bb20a275fc4de35cc7049dcc36f\transformed\jetified-android-maps-utils-3.8.2\AndroidManifest.xml:9:13-58
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
+MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:26:5-79
+MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:28:9-32
+queries
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:30:5-34:15
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\70aef1bc674111bde59e8a56ea309381\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\56fea15e0fd0849845183e2c684c73f8\transformed\jetified-play-services-base-18.2.0\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\56fea15e0fd0849845183e2c684c73f8\transformed\jetified-play-services-base-18.2.0\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\56fea15e0fd0849845183e2c684c73f8\transformed\jetified-play-services-base-18.2.0\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\56fea15e0fd0849845183e2c684c73f8\transformed\jetified-play-services-base-18.2.0\AndroidManifest.xml:20:19-85
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:25:22-65
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:27:5-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:27:22-78
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:28:5-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:28:22-74
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:31:9-39:20
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4e20d92b444a196a96ca978a1446a2e8\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\koron\.gradle\caches\8.8\transforms\4e20d92b444a196a96ca978a1446a2e8\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:35:13-31
+	android:authorities
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:33:13-68
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:32:13-67
+meta-data#androidx.work.WorkManagerInitializer
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:36:13-38:52
+	android:value
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:38:17-49
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:37:17-68
+service#androidx.work.impl.background.systemalarm.SystemAlarmService
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:41:9-46:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:44:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:45:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:46:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:43:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:42:13-88
+service#androidx.work.impl.background.systemjob.SystemJobService
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:47:9-53:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:50:13-70
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:51:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:52:13-69
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:53:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:49:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:48:13-84
+service#androidx.work.impl.foreground.SystemForegroundService
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:54:9-59:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:57:13-77
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:58:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:59:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:56:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:55:13-81
+receiver#androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:61:9-66:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:64:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:65:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:66:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:63:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:62:13-88
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:67:9-77:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:70:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:71:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:72:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:69:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:68:13-106
+intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:73:13-76:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:74:17-87
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:74:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:75:17-90
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:75:25-87
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:78:9-88:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:81:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:82:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:83:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:80:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:79:13-104
+intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:84:13-87:29
+action#android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:85:17-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:85:25-74
+action#android.intent.action.BATTERY_LOW
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:86:17-76
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:86:25-73
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:89:9-99:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:92:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:93:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:94:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:91:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:90:13-104
+intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:95:13-98:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:96:17-83
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:96:25-80
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:97:17-82
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:97:25-79
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:100:9-109:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:103:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:104:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:105:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:102:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:101:13-103
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:106:13-108:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:107:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:107:25-76
+receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:110:9-121:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:113:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:114:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:115:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:112:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:111:13-88
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:116:13-120:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:117:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:117:25-76
+action#android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:17-73
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:119:17-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:119:25-78
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:122:9-131:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:125:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:126:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:127:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:124:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:123:13-99
+intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:128:13-130:29
+action#androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:129:17-98
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:129:25-95
+receiver#androidx.work.impl.diagnostics.DiagnosticsReceiver
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:132:9-142:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:135:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:136:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:137:13-57
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:138:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:134:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:133:13-78
+intent-filter#action:name:androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:139:13-141:29
+action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:140:17-88
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.1] C:\Users\koron\.gradle\caches\8.8\transforms\9f4af4849c9565b7827523a523c8a768\transformed\work-runtime-2.7.1\AndroidManifest.xml:140:25-85
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\koron\.gradle\caches\8.8\transforms\4ec4aabd3c7304c937edf623c24f9cfe\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\koron\.gradle\caches\8.8\transforms\0b0da0a193c1858f166ad5931b869025\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.2.5] C:\Users\koron\.gradle\caches\8.8\transforms\f68bb41df940d3a4482ac54526cc99d1\transformed\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.2.5] C:\Users\koron\.gradle\caches\8.8\transforms\f68bb41df940d3a4482ac54526cc99d1\transformed\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.2.5] C:\Users\koron\.gradle\caches\8.8\transforms\f68bb41df940d3a4482ac54526cc99d1\transformed\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.2.5] C:\Users\koron\.gradle\caches\8.8\transforms\f68bb41df940d3a4482ac54526cc99d1\transformed\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+permission#com.garageapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+uses-permission#com.garageapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\koron\.gradle\caches\8.8\transforms\ce4f5dec389711446a83e4dc2ffe53e3\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+meta-data#com.facebook.soloader.enabled
+ADDED from [com.facebook.soloader:soloader:0.11.0] C:\Users\koron\.gradle\caches\8.8\transforms\f8303fa96cdd76b93cd23fc565358d05\transformed\jetified-soloader-0.11.0\AndroidManifest.xml:12:9-14:37
+	android:value
+		ADDED from [com.facebook.soloader:soloader:0.11.0] C:\Users\koron\.gradle\caches\8.8\transforms\f8303fa96cdd76b93cd23fc565358d05\transformed\jetified-soloader-0.11.0\AndroidManifest.xml:14:13-34
+	android:name
+		ADDED from [com.facebook.soloader:soloader:0.11.0] C:\Users\koron\.gradle\caches\8.8\transforms\f8303fa96cdd76b93cd23fc565358d05\transformed\jetified-soloader-0.11.0\AndroidManifest.xml:13:13-57

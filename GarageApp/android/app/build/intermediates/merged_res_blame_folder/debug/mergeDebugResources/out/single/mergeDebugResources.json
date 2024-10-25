@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/drawable_rn_edit_text_material.xml.flat",
+        "source": "com.garageapp-main-40:/drawable/rn_edit_text_material.xml"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-mdpi_parking.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-mdpi/parking.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-xxxhdpi_parking.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-xxxhdpi/parking.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-xxhdpi_parking.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-xxhdpi/parking.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-xhdpi_parking.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-xhdpi/parking.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.garageapp-debug-38:/mipmap-hdpi_parking.png.flat",
+        "source": "com.garageapp-main-40:/mipmap-hdpi/parking.png"
+    }
+]
