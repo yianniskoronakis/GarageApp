@@ -10,6 +10,7 @@ const garageSchema = new mongoose.Schema({
   latitude: { type: Number, required: true},  // Προσθήκη συντεταγμένων
   longitude: { type: Number, required: true }, // Προσθήκη συντεταγμένων
   photos: { type: [String], required: true },
+  availableHours: [String],
   owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
 }, { timestamps: true });
 

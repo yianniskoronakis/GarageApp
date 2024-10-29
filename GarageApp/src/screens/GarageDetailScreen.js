@@ -14,6 +14,7 @@ import {
 import { useGarage } from '../context/GarageContext';
 import { useAuth } from '../context/AuthContext'; 
 import { useRoute, useNavigation, useFocusEffect } from '@react-navigation/native'; 
+import SetAvailabilityScreen from '../screens/setAvailabilityScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import config from '../config'; // Import your config for the server URL
 
@@ -231,13 +232,25 @@ const GarageDetailScreen = () => {
                 <TouchableOpacity style={styles.button} onPress={handleDelete}>
                   <Text style={styles.buttonText}>Delete</Text>
                 </TouchableOpacity>
+                {/* Προσθήκη κουμπιού Availability */}
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SetAvailability', { garageId })}>
+                  <Text style={styles.buttonText}>Availability</Text>
+                </TouchableOpacity>
               </>
             )}
           </>
         ) : (
-          <TouchableOpacity style={styles.button} onPress={handleLike}>
-            <Text style={styles.buttonText}>{isLiked ? 'Unlike' : 'Like'}</Text>
-          </TouchableOpacity>
+          <>
+            <TouchableOpacity style={styles.button} onPress={handleLike}>
+              <Text style={styles.buttonText}>{isLiked ? 'Unlike' : 'Like'}</Text>
+            </TouchableOpacity>
+
+            {/* Προσθέτουμε κουμπί κράτησης για τον χρήστη */}
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Reservation', { garageId })}>
+              <Text style={styles.buttonText}>Book</Text>
+            </TouchableOpacity>
+
+          </>
         )}
     </ScrollView>
   );

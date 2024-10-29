@@ -8,6 +8,8 @@ const { verifyToken } = require('./auth');  // Χρήση του verifyToken α�
 require('dotenv').config();
 const router = express.Router();
 const axios = require('axios');
+const Reservation = require('../models/Reservation');
+
 
 const geocodeAddress = async (address) => {
   console.log("μπηκε στο geocode ", address);
@@ -224,6 +226,52 @@ router.get('/:id', verifyToken, async (req, res) => {
   }
 });
 
+router.post('/:garageId/setAvailability', async (req, res) => {
+  console.log("Request received for setting availability");
+  const { garageId } = req.params;
+  const { availableHours } = req.body;
 
+  try {
+      const garage = await Garage.findByIdAndUpdate(garageId, { availableHours }, { new: true });
+      if (!garage) {
+          return res.status(404).json({ message: 'Το γκαράζ δεν βρέθηκε.' });
+      }
+
+      res.status(200).json({ message: 'Οι διαθέσιμες ώρες ενημερώθηκαν επιτυχώς.', garage });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Σφάλμα στον διακομιστή.', error: error.toString() });
+  }
+});
+
+router.get('/:garageId/availableSlots', async (req, res) => {
+  const { garageId } = req.params;
+
+  try {
+      const garage = await Garage.findById(garageId);
+      if (!garage) {
+          return res.status(404).json({ message: 'Το γκαράζ δεν βρέθηκε.' });
+      }
+
+      const availableHours = garage.availableHours || [];
+
+      // Εύρεση δεσμευμένων ωρών για το συγκεκριμένο γκαράζ
+      const reservations = await Reservation.find({
+          garage: garageId,
+          status: 'active',
+          startHour: { $in: availableHours }, // Φιλτράρισμα ωρών που είναι διαθέσιμες αλλά και δεσμευμένες
+      });
+
+      const reservedHours = reservations.map((reservation) => reservation.startHour);
+
+      // Διαθέσιμες ώρες = ώρες που δεν είναι στις δεσμευμένες
+      const freeHours = availableHours.filter(hour => !reservedHours.includes(hour));
+
+      res.status(200).json({ availableHours: freeHours });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Σφάλμα στον διακομιστή.', error: error.toString() });
+  }
+});
 
 module.exports = { router };

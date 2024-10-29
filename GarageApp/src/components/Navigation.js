@@ -12,6 +12,8 @@ import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import WishlistScreen from '../screens/WishlistScreen';
 import GarageDetailScreen from '../screens/GarageDetailScreen';
+import ReservationScreen from '../screens/ReservationScreen';
+import SetAvailabilityScreen from '../screens/setAvailabilityScreen';
 
 const MyGaragesStack = createStackNavigator();
 const Stack = createStackNavigator();
@@ -27,6 +29,16 @@ const MyGaragesStackNavigator = () => (
     <MyGaragesStack.Screen 
       name="GarageDetail" 
       component={GarageDetailScreen} 
+      options={{ headerShown: false }} 
+    />
+    <MyGaragesStack.Screen 
+      name="Reservation" 
+      component={ReservationScreen} 
+      options={{ headerShown: false }} 
+    />
+    <MyGaragesStack.Screen 
+      name="SetAvailability" 
+      component={SetAvailabilityScreen} 
       options={{ headerShown: false }} 
     />
   </MyGaragesStack.Navigator>
