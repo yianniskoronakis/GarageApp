@@ -274,4 +274,32 @@ router.get('/:garageId/availableSlots', async (req, res) => {
   }
 });
 
+
+// Route to fetch reservations for a specific garage
+router.get('/:garageId/reservations', verifyToken, async (req, res) => {
+  const { garageId } = req.params;
+
+  try {
+    // Check if the garage exists
+    const garage = await Garage.findById(garageId);
+    if (!garage) {
+      return res.status(404).json({ message: 'Garage not found' });
+    }
+
+    // Ensure that only the garage owner can access this information
+    if (garage.owner.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ message: 'Access denied. Only the owner can view reservations.' });
+    }
+
+    // Fetch reservations for the garage and populate user details
+    const reservations = await Reservation.find({ garage: garageId })
+      .populate('user', 'firstname lastname phone');
+
+    res.status(200).json({ reservations });
+  } catch (error) {
+    console.error('Error fetching reservations:', error);
+    res.status(500).json({ message: 'Failed to fetch reservations', error: error.message });
+  }
+});
+
 module.exports = { router };

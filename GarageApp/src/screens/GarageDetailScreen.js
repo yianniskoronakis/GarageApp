@@ -7,21 +7,19 @@ import {
   TouchableOpacity, 
   BackHandler, 
   ActivityIndicator,
-  Switch, 
   ScrollView, 
   Image 
 } from 'react-native';
 import { useGarage } from '../context/GarageContext';
 import { useAuth } from '../context/AuthContext'; 
-import { useRoute, useNavigation, useFocusEffect } from '@react-navigation/native'; 
-import SetAvailabilityScreen from '../screens/setAvailabilityScreen';
+import { useRoute, useNavigation, useFocusEffect } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import config from '../config'; // Import your config for the server URL
+import config from '../config';
 
 const GarageDetailScreen = () => {
   const route = useRoute();
   const { garageId } = route.params;
-  const { updateGarage, deleteGarage, getGarageById, fetchLikedGarages } = useGarage();
+  const { updateGarage, deleteGarage, getGarageById, fetchReservations, fetchLikedGarages } = useGarage();
   const { likeGarage, unlikeGarage, user } = useAuth();
   const navigation = useNavigation();
 
@@ -35,7 +33,8 @@ const GarageDetailScreen = () => {
   const [description, setDescription] = useState('');
   const [loading, setLoading] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0); // Track current image index
+  const [reservations, setReservations] = useState([]); // State for reservations
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchGarageDetails = async () => {
@@ -45,18 +44,24 @@ const GarageDetailScreen = () => {
         setGarage(fetchedGarage);
         setAddress(fetchedGarage?.address || '');
         setPrice(fetchedGarage?.price || '');
-        setSquaremeter(fetchedGarage?.squaremeter|| '');
-        setGaragetype(fetchedGarage?.garagetype|| '');
-        setMaxheight(fetchedGarage?.maxheight|| '');
-        setDescription(fetchedGarage?.description|| '');
+        setSquaremeter(fetchedGarage?.squaremeter || '');
+        setGaragetype(fetchedGarage?.garagetype || '');
+        setMaxheight(fetchedGarage?.maxheight || '');
+        setDescription(fetchedGarage?.description || '');
         setIsLiked(fetchedGarage.likedBy?.includes(user.id) || false);
+
+        // Fetch reservations if the current user is the owner
+        if (fetchedGarage.owner === user.id) {
+          const garageReservations = await fetchReservations(garageId);
+          setReservations(garageReservations);
+        }
       } catch (error) {
         console.error('Error fetching garage:', error);
       } finally {
         setLoading(false);
       }
     };
-  
+    console.log(reservations.startHour);
     fetchGarageDetails();
   }, [garageId, user.id]);
 
@@ -75,20 +80,20 @@ const GarageDetailScreen = () => {
       console.error('All fields must be filled out');
       return;
     }
-  
+
     try {
       const token = await AsyncStorage.getItem('token');
-      const updatedData = { address, price, squaremeter,  garagetype, maxheight, description};
-  
+      const updatedData = { address, price, squaremeter, garagetype, maxheight, description };
+
       await updateGarage(garageId, updatedData, token);
       const fetchedGarage = await getGarageById(garageId, token);
       setGarage(fetchedGarage);
       setAddress(fetchedGarage?.address || '');
       setPrice(fetchedGarage?.price || '');
-      setSquaremeter(fetchedGarage?.squaremeter|| '');
-      setGaragetype(fetchedGarage?.garagetype|| false);
-      setMaxheight(fetchedGarage?.maxheight|| '');
-      setDescription(fetchedGarage?.description|| '');
+      setSquaremeter(fetchedGarage?.squaremeter || '');
+      setGaragetype(fetchedGarage?.garagetype || false);
+      setMaxheight(fetchedGarage?.maxheight || '');
+      setDescription(fetchedGarage?.description || '');
       setIsEditing(false);
     } catch (error) {
       console.error('Error updating garage:', error);
@@ -138,20 +143,7 @@ const GarageDetailScreen = () => {
   }
 
   const isOwner = garage.owner === user.id;
-
-  // Function to change the current image index
-  const changeImage = (direction) => {
-    if (direction === 'next') {
-      setCurrentIndex((prevIndex) => 
-        prevIndex < garage.photos.length - 1 ? prevIndex + 1 : prevIndex
-      );
-    } else if (direction === 'prev') {
-      setCurrentIndex((prevIndex) => 
-        prevIndex > 0 ? prevIndex - 1 : prevIndex
-      );
-    }
-  };
-
+  
   return (
     <ScrollView contentContainerStyle={styles.scrollViewContainer}>
       <View style={styles.innerContainer}>
@@ -162,96 +154,84 @@ const GarageDetailScreen = () => {
         <Text style={styles.label}>Squaremeter: {garage.squaremeter}</Text>
         <Text style={styles.label}>Garage Type: {garage.garagetype ? 'Open' : 'Close'}</Text>
         {!garage.garagetype && (
-          <Text style={styles.label}>
-           Maxheight: {garage.maxheight || 'N/A'}
-          </Text>
+          <Text style={styles.label}>Maxheight: {garage.maxheight || 'N/A'}</Text>
         )}
 
-        {/* Photo Slideshow Section */}
         <Text style={styles.label}>Photos:</Text>
         {garage.photos && garage.photos.length > 0 ? (
           <View style={styles.photoContainer}>
-            <TouchableOpacity onPress={() => changeImage('prev')} style={styles.arrowButton}>
+            <TouchableOpacity onPress={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))} style={styles.arrowButton}>
               <Text style={styles.arrowText}>←</Text>
             </TouchableOpacity>
-            
             <Image
               source={{ uri: `${config.server.baseUrl}/uploads/${garage.photos[currentIndex]}` }}
               style={styles.photo}
             />
-
-            <TouchableOpacity onPress={() => changeImage('next')} style={styles.arrowButton}>
+            <TouchableOpacity onPress={() => setCurrentIndex((prev) => Math.min(prev + 1, garage.photos.length - 1))} style={styles.arrowButton}>
               <Text style={styles.arrowText}>→</Text>
             </TouchableOpacity>
-
-            <View style={styles.imageIndexContainer}>
-              <Text style={styles.imageIndexText}>{`${currentIndex + 1} of ${garage.photos.length}`}</Text>
-            </View>
+            <Text style={styles.imageIndexText}>{`${currentIndex + 1} of ${garage.photos.length}`}</Text>
           </View>
         ) : (
           <Text style={styles.noPhotosText}>No photos available.</Text>
         )}
 
-          <Text style={styles.label}>Price:</Text>
-          {isEditing ? (
-            <TextInput
-              value={price}
-              onChangeText={setPrice}
-              placeholder="Price"
-              keyboardType="numeric"
-              style={styles.input}
-            />
-          ) : (
-            <Text style={styles.value}>{garage.price || 'N/A'}</Text>
-          )}
-
-          <Text style={styles.label}>Description:</Text>
-          {isEditing ? (
-            <TextInput
-              value={description}
-              onChangeText={setDescription}
-              placeholder="Description"
-              style={styles.input}
-            />
-          ) : (
-            <Text style={styles.value}>{garage.description || 'N/A'}</Text>
-          )}
-        </View>
-
-        {isOwner ? (
-          <>
-            {isEditing ? (
-              <TouchableOpacity style={styles.button} onPress={handleUpdate}>
-                <Text style={styles.buttonText}>Apply Changes</Text>
-              </TouchableOpacity>
-            ) : (
-              <>
-                <TouchableOpacity style={styles.button} onPress={() => setIsEditing(true)}>
-                  <Text style={styles.buttonText}>Edit</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={handleDelete}>
-                  <Text style={styles.buttonText}>Delete</Text>
-                </TouchableOpacity>
-                {/* Προσθήκη κουμπιού Availability */}
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SetAvailability', { garageId })}>
-                  <Text style={styles.buttonText}>Availability</Text>
-                </TouchableOpacity>
-              </>
-            )}
-          </>
+        <Text style={styles.label}>Price:</Text>
+        {isEditing ? (
+          <TextInput value={price} onChangeText={setPrice} placeholder="Price" keyboardType="numeric" style={styles.input} />
         ) : (
-          <>
-            <TouchableOpacity style={styles.button} onPress={handleLike}>
-              <Text style={styles.buttonText}>{isLiked ? 'Unlike' : 'Like'}</Text>
-            </TouchableOpacity>
-
-            {/* Προσθέτουμε κουμπί κράτησης για τον χρήστη */}
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Reservation', { garageId })}>
-              <Text style={styles.buttonText}>Book</Text>
-            </TouchableOpacity>
-
-          </>
+          <Text style={styles.value}>{garage.price || 'N/A'}</Text>
         )}
+
+        <Text style={styles.label}>Description:</Text>
+        {isEditing ? (
+          <TextInput value={description} onChangeText={setDescription} placeholder="Description" style={styles.input} />
+        ) : (
+          <Text style={styles.value}>{garage.description || 'N/A'}</Text>
+        )}
+        {reservations.map((reservation) => (
+  <View key={reservation._id} style={styles.reservationItem}>
+    <Text style={styles.infoText}>
+      User: {reservation.user.firstname} {reservation.user.lastname}
+    </Text>
+    <Text style={styles.infoText}>Phone: {reservation.user.phone}</Text>
+    <Text style={styles.infoText}>Start Hour: {reservation.startHour}</Text>
+    <Text style={styles.infoText}>End Hour: {reservation.endHour}</Text>
+  </View>
+))}
+
+      </View>
+
+      {isOwner ? (
+        <>
+          {isEditing ? (
+            <TouchableOpacity style={styles.button} onPress={handleUpdate}>
+              <Text style={styles.buttonText}>Apply Changes</Text>
+            </TouchableOpacity>
+          ) : (
+            <>
+              <TouchableOpacity style={styles.button} onPress={() => setIsEditing(true)}>
+                <Text style={styles.buttonText}>Edit</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.button} onPress={handleDelete}>
+                <Text style={styles.buttonText}>Delete</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SetAvailability', { garageId })}>
+                <Text style={styles.buttonText}>Availability</Text>
+              </TouchableOpacity>
+            </>
+          )}
+        </>
+      ) : (
+        <>
+          <TouchableOpacity style={styles.button} onPress={handleLike}>
+            <Text style={styles.buttonText}>{isLiked ? 'Unlike' : 'Like'}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Reservation', { garageId })}>
+            <Text style={styles.buttonText}>Book</Text>
+          </TouchableOpacity>
+        </>
+      )}
     </ScrollView>
   );
 };
@@ -262,17 +242,6 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
   },
   innerContainer: {
-    padding: 16,
-    backgroundColor: '#f4f4f4',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
-    color: '#333',
-  },
-  container: {
-    flex: 1,
     padding: 16,
     backgroundColor: '#f4f4f4',
   },
@@ -291,9 +260,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#555',
     marginBottom: 8,
-  },
-  detailContainer: {
-    marginVertical: 16,
   },
   label: {
     fontWeight: 'bold',
@@ -332,17 +298,29 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
   },
-  imageIndexContainer: {
-    marginTop: 8,
-  },
   imageIndexText: {
     fontSize: 16,
     color: '#333',
+    marginTop: 8,
   },
   noPhotosText: {
     color: 'red',
     textAlign: 'center',
     marginTop: 20,
+  },
+  reservationsContainer: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: '#e8f4fa',
+    borderRadius: 8,
+  },
+  reservationItem: {
+    padding: 10,
+    marginBottom: 8,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#ddd',
   },
   button: {
     backgroundColor: '#007BFF',

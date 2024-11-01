@@ -221,6 +221,29 @@ const fetchLikedGarages = async () => {
       throw error;
     }
   };
+
+  const fetchReservations = async (garageId) => {
+    try {
+      const token = await AsyncStorage.getItem('token');
+      const response = await fetch(`${config.server.baseUrl}/api/garages/${garageId}/reservations`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to fetch reservations');
+      }
+  
+      const data = await response.json();
+      return data.reservations; // Assuming response returns an array of reservations
+    } catch (error) {
+      console.error('Error fetching reservations:', error);
+      throw error;
+    }
+  };
   
 
 useEffect(() => {
@@ -241,6 +264,7 @@ useEffect(() => {
       fetchMyGarages,
       fetchCoordinates,
       fetchLikedGarages,
+      fetchReservations,
       getGarageById,
       deleteGarage,
       updateGarage,
