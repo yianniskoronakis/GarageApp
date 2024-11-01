@@ -7,14 +7,18 @@ import Geolocation from '@react-native-community/geolocation';
 
 const { width, height } = Dimensions.get('window');
 
-// Custom Marker Component with color prop and improved styling
-const CustomMarker = ({ price, onPress, color }) => (
-  <TouchableOpacity onPress={onPress} style={[styles.markerContainer]}>
-    <View style={[styles.marker, { backgroundColor: color, shadowColor: color }]}>
-      <Text style={styles.markerPrice}>{price}</Text>
-    </View>
-  </TouchableOpacity>
-);
+// Haversine formula to calculate distance in kilometers
+const haversineDistance = (lat1, lon1, lat2, lon2) => {
+  const R = 6371; // Earth's radius in kilometers
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos((lat1 * Math.PI) / 180) * Math.cos((lat2 * Math.PI) / 180) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+};
 
 // Custom User Location Marker Component
 const UserLocationMarker = () => (
@@ -41,6 +45,7 @@ const MapScreen = () => {
   const [isClosedGarage, setIsClosedGarage] = useState(null);
   const [minHeight, setMinHeight] = useState('');
   const [minSquareMeters, setMinSquareMeters] = useState('');
+  const [maxDistance, setMaxDistance] = useState(''); // New state for distance filter
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -105,18 +110,28 @@ const MapScreen = () => {
     const meetsTypeCondition = isClosedGarage === null || garage.garagetype === isClosedGarage;
     const meetsHeightCondition = isClosedGarage !== true || !minHeight || garage.maxheight >= minHeight;
     const meetsSquareMetersCondition = !minSquareMeters || garage.squaremeter >= minSquareMeters;
-    const hasAvailableHours = Array.isArray(garage.availableHours) && garage.availableHours.length > 0;
+
+    // Correctly check for available hours
+    const hasAvailableHours = garage.availableHours && Array.isArray(garage.availableHours) && garage.availableHours.length > 0;
     const isNotUserGarage = !mygarages.some(myGarage => myGarage._id === garage._id);
+
+    // Calculate distance if userLocation is available
+    const distance = userLocation 
+      ? haversineDistance(userLocation.latitude, userLocation.longitude, Number(garage.latitude), Number(garage.longitude)) 
+      : null;
+    const meetsDistanceCondition = !maxDistance || (distance && distance <= maxDistance);
 
     return (
       meetsPriceCondition &&
       meetsTypeCondition &&
       meetsHeightCondition &&
       meetsSquareMetersCondition &&
-      hasAvailableHours &&
-      isNotUserGarage
+      hasAvailableHours && // Filter only garages with available hours
+      isNotUserGarage &&
+      meetsDistanceCondition
     );
-  });
+});
+
 
   return (
     <View style={styles.container}>
@@ -167,6 +182,14 @@ const MapScreen = () => {
             keyboardType="numeric"
             value={maxPrice}
             onChangeText={text => setMaxPrice(Number(text))}
+          />
+          <Text style={styles.sidebarTitle}>Max Distance (km)</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Enter max distance in km"
+            keyboardType="numeric"
+            value={maxDistance}
+            onChangeText={text => setMaxDistance(Number(text))}
           />
           <Text style={styles.sidebarTitle}>Garage Type</Text>
           <View style={styles.switchContainer}>
@@ -260,7 +283,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginVertical: 10,
   },
-  // User location custom marker styles
   userLocationMarkerContainer: {
     alignItems: 'center',
   },
