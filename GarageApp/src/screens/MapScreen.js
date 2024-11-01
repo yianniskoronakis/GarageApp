@@ -3,6 +3,7 @@ import { StyleSheet, View, Dimensions, TouchableOpacity, Text, ActivityIndicator
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import { useNavigation } from '@react-navigation/native';
 import { useGarage } from '../context/GarageContext';
+import Geolocation from '@react-native-community/geolocation';
 
 const { width, height } = Dimensions.get('window');
 
@@ -15,6 +16,16 @@ const CustomMarker = ({ price, onPress, color }) => (
   </TouchableOpacity>
 );
 
+// Custom User Location Marker Component
+const UserLocationMarker = () => (
+  <View style={styles.userLocationMarkerContainer}>
+    <View style={styles.userLocationMarker}>
+      <View style={styles.userLocationInnerCircle} />
+    </View>
+    <Text style={styles.userLocationLabel}>You are here</Text>
+  </View>
+);
+
 const MapScreen = () => {
   const { garages, mygarages, loading, error, fetchMyGarages } = useGarage();
   const navigation = useNavigation();
@@ -24,6 +35,7 @@ const MapScreen = () => {
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,
   });
+  const [userLocation, setUserLocation] = useState(null);
   const [filterVisible, setFilterVisible] = useState(false);
   const [maxPrice, setMaxPrice] = useState('');
   const [isClosedGarage, setIsClosedGarage] = useState(null);
@@ -35,6 +47,22 @@ const MapScreen = () => {
       fetchMyGarages();
     }, 3000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    Geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        setUserLocation({ latitude, longitude });
+        setMapRegion({
+          ...mapRegion,
+          latitude,
+          longitude,
+        });
+      },
+      (error) => console.log(error),
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+    );
   }, []);
 
   useEffect(() => {
@@ -98,9 +126,9 @@ const MapScreen = () => {
         region={mapRegion}
         onRegionChangeComplete={region => setMapRegion(region)}
       >
-        {filteredGarages.map((garage, index) => (
+        {filteredGarages.map((garage) => (
           <Marker
-            key={garage._id || index}
+            key={garage._id}
             coordinate={{ latitude: Number(garage.latitude), longitude: Number(garage.longitude) }}
             onPress={() => navigation.navigate('MyGarages', { screen: 'GarageDetail', params: { garageId: garage._id } })}
           >
@@ -120,6 +148,11 @@ const MapScreen = () => {
             </View>
           </Marker>
         ))}
+        {userLocation && (
+          <Marker coordinate={userLocation}>
+            <UserLocationMarker />
+          </Marker>
+        )}
       </MapView>
 
       <TouchableOpacity style={styles.filterButton} onPress={() => setFilterVisible(!filterVisible)}>
@@ -226,6 +259,37 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginVertical: 10,
+  },
+  // User location custom marker styles
+  userLocationMarkerContainer: {
+    alignItems: 'center',
+  },
+  userLocationMarker: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    backgroundColor: 'rgba(0, 122, 255, 0.6)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 4,
+    borderColor: 'rgba(0, 122, 255, 0.3)',
+    shadowColor: '#007AFF',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.5,
+    shadowRadius: 6,
+    elevation: 10,
+  },
+  userLocationInnerCircle: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#007AFF',
+  },
+  userLocationLabel: {
+    marginTop: 5,
+    color: 'rgba(0, 122, 255, 0.8)',
+    fontSize: 10,
+    fontWeight: 'bold',
   },
 });
 
