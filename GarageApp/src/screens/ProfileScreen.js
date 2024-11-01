@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, Alert, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { useAuth } from '../context/AuthContext';
 import { useGarage } from '../context/GarageContext';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, CommonActions } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Error from '../components/Error';
 
@@ -17,7 +17,6 @@ const ProfileScreen = () => {
     setLoading(true);
     try {
       await logout();
-      navigation.navigate('Login');
     } catch (error) {
       setError('Logout failed');
     } finally {
@@ -50,7 +49,6 @@ const ProfileScreen = () => {
               }
 
               await deleteAccount();
-              navigation.navigate('Login');
             } catch (error) {
               setError(error.message || 'Account deletion failed');
             } finally {
@@ -84,6 +82,7 @@ const ProfileScreen = () => {
     </View>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
