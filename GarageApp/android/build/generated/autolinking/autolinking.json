@@ -173,6 +173,30 @@
         }
       }
     },
+    "react-native-linear-gradient": {
+      "root": "C:\\Users\\koron\\Desktop\\App\\GarageApp\\node_modules\\react-native-linear-gradient",
+      "name": "react-native-linear-gradient",
+      "platforms": {
+        "ios": {
+          "podspecPath": "C:\\Users\\koron\\Desktop\\App\\GarageApp\\node_modules\\react-native-linear-gradient\\BVLinearGradient.podspec",
+          "version": "2.8.3",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "C:\\Users\\koron\\Desktop\\App\\GarageApp\\node_modules\\react-native-linear-gradient\\android",
+          "packageImportPath": "import com.BV.LinearGradient.LinearGradientPackage;",
+          "packageInstance": "new LinearGradientPackage()",
+          "buildTypes": [],
+          "componentDescriptors": [],
+          "cmakeListsPath": "C:/Users/koron/Desktop/App/GarageApp/node_modules/react-native-linear-gradient/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
     "react-native-maps": {
       "root": "C:\\Users\\koron\\Desktop\\App\\GarageApp\\node_modules\\react-native-maps",
       "name": "react-native-maps",

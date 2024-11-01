@@ -24,6 +24,8 @@ import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 import com.github.douglasjunior.reactNativeGetLocation.ReactNativeGetLocationPackage;
 // react-native-image-picker
 import com.imagepicker.ImagePickerPackage;
+// react-native-linear-gradient
+import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-maps
 import com.rnmaps.maps.MapsPackage;
 // react-native-permissions
@@ -88,6 +90,7 @@ public class PackageList {
       new RNGestureHandlerPackage(),
       new ReactNativeGetLocationPackage(),
       new ImagePickerPackage(),
+      new LinearGradientPackage(),
       new MapsPackage(),
       new RNPermissionsPackage(),
       new SafeAreaContextPackage(),

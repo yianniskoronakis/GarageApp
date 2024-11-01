@@ -61,7 +61,6 @@ const GarageDetailScreen = () => {
         setLoading(false);
       }
     };
-    console.log(reservations.startHour);
     fetchGarageDetails();
   }, [garageId, user.id]);
 
@@ -190,16 +189,15 @@ const GarageDetailScreen = () => {
           <Text style={styles.value}>{garage.description || 'N/A'}</Text>
         )}
         {reservations.map((reservation) => (
-  <View key={reservation._id} style={styles.reservationItem}>
-    <Text style={styles.infoText}>
-      User: {reservation.user.firstname} {reservation.user.lastname}
-    </Text>
-    <Text style={styles.infoText}>Phone: {reservation.user.phone}</Text>
-    <Text style={styles.infoText}>Start Hour: {reservation.startHour}</Text>
-    <Text style={styles.infoText}>End Hour: {reservation.endHour}</Text>
-  </View>
-))}
-
+          <View key={reservation._id} style={styles.reservationItem}>
+            <Text style={styles.infoText}>
+              User: {reservation.user.firstname} {reservation.user.lastname}
+            </Text>
+            <Text style={styles.infoText}>Phone: {reservation.user.phone}</Text>
+            <Text style={styles.infoText}>Start Hour: {reservation.startHour}</Text>
+            <Text style={styles.infoText}>End Hour: {reservation.endHour}</Text>
+          </View>
+        ))}
       </View>
 
       {isOwner ? (
@@ -327,6 +325,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     marginVertical: 10,
+    marginHorizontal: 16, // Add horizontal margin to prevent touching the edges
   },
   buttonText: {
     color: 'white',

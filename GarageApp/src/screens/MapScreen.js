@@ -111,8 +111,9 @@ const MapScreen = () => {
     const meetsHeightCondition = isClosedGarage !== true || !minHeight || garage.maxheight >= minHeight;
     const meetsSquareMetersCondition = !minSquareMeters || garage.squaremeter >= minSquareMeters;
 
-    // Correctly check for available hours
-    const hasAvailableHours = garage.availableHours && Array.isArray(garage.availableHours) && garage.availableHours.length > 0;
+    // Check for at least one unbooked available hour
+    const hasAvailableHours = Array.isArray(garage.availableHours) && 
+                              garage.availableHours.some(hour => !hour.isBooked);
     const isNotUserGarage = !mygarages.some(myGarage => myGarage._id === garage._id);
 
     // Calculate distance if userLocation is available
@@ -126,11 +127,13 @@ const MapScreen = () => {
       meetsTypeCondition &&
       meetsHeightCondition &&
       meetsSquareMetersCondition &&
-      hasAvailableHours && // Filter only garages with available hours
+      hasAvailableHours && // Only garages with unbooked available hours
       isNotUserGarage &&
       meetsDistanceCondition
     );
 });
+
+
 
 
   return (
