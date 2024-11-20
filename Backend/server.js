@@ -36,8 +36,12 @@ app.use('/api/garages', garageRoutes);
 const reservationRoutes = require('./routes/reservation');
 app.use('/api/reservations', reservationRoutes);
 
+const reviewRoutes = require('./routes/review');
+app.use('/api/review', reviewRoutes);
+
 // Σημείο που επιτρέπει την πρόσβαση στις εικόνες
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 // Προσθήκη cron job που τρέχει κάθε ώρα και ένα δευτερόλεπτο
 cron.schedule('1 0 * * * *', async () => {

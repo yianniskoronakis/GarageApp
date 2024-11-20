@@ -85,7 +85,7 @@ const SetAvailabilityScreen = ({ route, navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Επιλέξτε ώρες διαθεσιμότητας για το επόμενο 24ωρο:</Text>
+            <Text style={styles.title}>Select available hours:</Text>
             <FlatList
                 data={availableHours}
                 renderItem={renderHourSlot}

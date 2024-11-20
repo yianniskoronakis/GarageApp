@@ -167,7 +167,7 @@ const ReservationScreen = ({ navigation, route }) => {
                 keyExtractor={(item) => item}
                 ListFooterComponent={
                     <View style={styles.footer}>
-                        <Button title="Επιβεβαίωση Κράτησης" onPress={handleConfirmReservation} />
+                        <Button title="Confirm" onPress={handleConfirmReservation} />
                     </View>
                 }
             />

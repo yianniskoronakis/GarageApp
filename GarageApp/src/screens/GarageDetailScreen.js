@@ -10,6 +10,7 @@ import {
   ScrollView, 
   Image 
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { useGarage } from '../context/GarageContext';
 import { useAuth } from '../context/AuthContext'; 
 import { useRoute, useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -36,31 +37,43 @@ const GarageDetailScreen = () => {
   const [reservations, setReservations] = useState([]); // State for reservations
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Review-related states
+  const [reviews, setReviews] = useState([]);
+  const [averageRating, setAverageRating] = useState(0);
+  const [newRating, setNewRating] = useState('');
+  const [newComment, setNewComment] = useState('');
+
   useEffect(() => {
     const fetchGarageDetails = async () => {
       try {
         const token = await AsyncStorage.getItem('token');
         const fetchedGarage = await getGarageById(garageId, token);
         setGarage(fetchedGarage);
-        setAddress(fetchedGarage?.address || '');
-        setPrice(fetchedGarage?.price || '');
-        setSquaremeter(fetchedGarage?.squaremeter || '');
-        setGaragetype(fetchedGarage?.garagetype || '');
-        setMaxheight(fetchedGarage?.maxheight || '');
-        setDescription(fetchedGarage?.description || '');
-        setIsLiked(fetchedGarage.likedBy?.includes(user.id) || false);
-
-        // Fetch reservations if the current user is the owner
-        if (fetchedGarage.owner === user.id) {
-          const garageReservations = await fetchReservations(garageId);
-          setReservations(garageReservations);
+    
+        const response = await fetch(`${config.server.baseUrl}/api/review/${garageId}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch reviews: ${response.status}`);
+        }
+    
+        const data = await response.json();
+        setReviews(data.reviews);
+        setAverageRating(data.averageRating);
+    
+        // Έλεγχος αν ο χρήστης έχει ήδη κάνει review
+        const userReview = data.reviews.find((review) => review.user._id === user.id);
+        if (userReview) {
+          setNewRating(userReview.rating);
+          setNewComment(userReview.comment);
         }
       } catch (error) {
         console.error('Error fetching garage:', error);
+        alert(`Error fetching garage: ${error.message}`);
       } finally {
         setLoading(false);
       }
     };
+    
+    
     fetchGarageDetails();
   }, [garageId, user.id]);
 
@@ -114,6 +127,86 @@ const GarageDetailScreen = () => {
       alert('An error occurred while liking the garage. Please try again later.');
     }
   };
+
+  const handleSubmitReview = async () => {
+    if (!newRating || newRating < 1 || newRating > 5) {
+      alert('Please provide a rating between 1 and 5.');
+      return;
+    }
+  
+    console.log('Submitting review for user:', user);
+    console.log('Garage ID:', garageId);
+  
+    try {
+      const token = await AsyncStorage.getItem('token');
+      const response = await fetch(`${config.server.baseUrl}/api/review`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          garageId,
+          rating: newRating,
+          comment: newComment,
+        }),
+      });
+  
+      const result = await response.json();
+      console.log('Review submitted:', result);
+  
+      if (response.ok) {
+        setReviews((prev) => [...prev, result.review]);
+        setNewRating('');
+        setNewComment('');
+      } else {
+        console.error('Failed to submit review:', result.error);
+        alert(result.error || 'Failed to submit review.');
+      }
+    } catch (error) {
+      console.error('Error submitting review:', error);
+      alert('Failed to submit review.');
+    }
+  };
+  
+
+  const handleDeleteReview = async (reviewId) => {
+    try {
+      const token = await AsyncStorage.getItem('token');
+      await fetch(`${config.server.baseUrl}/api/review/${reviewId}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      setReviews((prev) => prev.filter((review) => review._id !== reviewId));
+    } catch (error) {
+      console.error('Error deleting review:', error);
+    }
+  };
+
+  const renderStars = (rating, editable = false) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <TouchableOpacity
+          key={i}
+          onPress={() => editable && setNewRating(i)}
+          disabled={!editable}
+        >
+          <Icon
+            name="star"
+            size={24}
+            color={i <= rating ? '#FFD700' : '#CCCCCC'}
+            style={{ marginHorizontal: 2 }}
+          />
+        </TouchableOpacity>
+      );
+    }
+    return <View style={styles.starContainer}>{stars}</View>;
+  };
+
 
   useFocusEffect(
     useCallback(() => {
@@ -230,6 +323,43 @@ const GarageDetailScreen = () => {
           </TouchableOpacity>
         </>
       )}
+      <Text style={styles.sectionTitle}>Reviews</Text>
+        <View style={styles.averageRatingContainer}>
+          {renderStars(Math.round(averageRating))}
+          <Text style={styles.averageRatingText}>{reviews.length} reviews</Text>
+        </View>
+
+        {reviews.map((review) => (
+  <View key={review._id} style={styles.reviewItem}>
+    <Text style={styles.reviewText}>
+      {(review.user?.firstname || 'Unknown')} {(review.user?.lastname || 'User')} - {review.rating}/5
+    </Text>
+    <Text style={styles.reviewComment}>{review.comment}</Text>
+    {review.user?._id === user.id && (
+      <TouchableOpacity onPress={() => handleDeleteReview(review._id)}>
+        <Text style={styles.deleteButton}>Delete</Text>
+      </TouchableOpacity>
+    )}
+  </View>
+))}
+
+{!reviews.some((review) => review.user?._id === user.id || review.user?.id === user.id) && (
+  <View style={styles.addReviewContainer}>
+    <Text style={styles.sectionTitle}>Add Your Review</Text>
+    {renderStars(newRating, true)}
+    <TextInput
+      style={styles.input}
+      placeholder="Leave a comment"
+      value={newComment}
+      onChangeText={(value) => setNewComment(value)}
+    />
+    <TouchableOpacity style={styles.button} onPress={handleSubmitReview}>
+      <Text style={styles.buttonText}>Submit Review</Text>
+    </TouchableOpacity>
+  </View>
+)}
+
+
     </ScrollView>
   );
 };
@@ -335,6 +465,75 @@ const styles = StyleSheet.create({
   errorText: {
     color: 'red',
     textAlign: 'center',
+  },
+
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 20,
+    marginBottom: 10,
+  },
+  averageRating: {
+    fontSize: 16,
+    marginBottom: 10,
+  },
+  reviewItem: {
+    padding: 10,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  reviewText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  reviewComment: {
+    fontSize: 14,
+    marginTop: 5,
+  },
+  deleteButton: {
+    color: 'red',
+    marginTop: 10,
+    textAlign: 'right',
+  },
+  addReviewContainer: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: '#f9f9f9',
+    borderRadius: 5,
+  },
+  starContainer: {
+    flexDirection: 'row',
+    marginVertical: 8,
+  },
+  input: {
+    width: '100%',
+    padding: 10,
+    marginVertical: 10,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+  },
+  button: {
+    backgroundColor: '#007BFF',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 10,
+  },
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingText: {
+    marginTop: 12,
+    fontSize: 16,
+    color: '#555',
   },
 });
 
