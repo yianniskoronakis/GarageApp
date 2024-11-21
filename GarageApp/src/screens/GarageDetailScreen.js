@@ -134,9 +134,6 @@ const GarageDetailScreen = () => {
       return;
     }
   
-    console.log('Submitting review for user:', user);
-    console.log('Garage ID:', garageId);
-  
     try {
       const token = await AsyncStorage.getItem('token');
       const response = await fetch(`${config.server.baseUrl}/api/review`, {
@@ -153,10 +150,13 @@ const GarageDetailScreen = () => {
       });
   
       const result = await response.json();
-      console.log('Review submitted:', result);
   
       if (response.ok) {
-        setReviews((prev) => [...prev, result.review]);
+        // Ενημέρωση του state με το νέο review
+        setReviews((prev) => [...prev, { ...result.review, user: { _id: user.id, firstname: user.firstname, lastname: user.lastname } }]);
+        setAverageRating(result.averageRating);
+  
+        // Καθαρισμός των πεδίων
         setNewRating('');
         setNewComment('');
       } else {
@@ -173,39 +173,64 @@ const GarageDetailScreen = () => {
   const handleDeleteReview = async (reviewId) => {
     try {
       const token = await AsyncStorage.getItem('token');
-      await fetch(`${config.server.baseUrl}/api/review/${reviewId}`, {
+      const response = await fetch(`${config.server.baseUrl}/api/review/${reviewId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-
-      setReviews((prev) => prev.filter((review) => review._id !== reviewId));
+  
+      if (response.ok) {
+        const updatedReviews = reviews.filter((review) => review._id !== reviewId);
+        setReviews(updatedReviews);
+  
+        // Υπολογισμός νέου μέσου όρου
+        const newAverage = updatedReviews.length
+          ? updatedReviews.reduce((sum, r) => sum + r.rating, 0) / updatedReviews.length
+          : 0;
+  
+        setAverageRating(newAverage);
+      } else {
+        alert('Failed to delete review.');
+      }
     } catch (error) {
       console.error('Error deleting review:', error);
+      alert('Failed to delete review.');
     }
   };
+  
 
-  const renderStars = (rating, editable = false) => {
-    const stars = [];
-    for (let i = 1; i <= 5; i++) {
-      stars.push(
-        <TouchableOpacity
-          key={i}
-          onPress={() => editable && setNewRating(i)}
-          disabled={!editable}
-        >
-          <Icon
-            name="star"
-            size={24}
-            color={i <= rating ? '#FFD700' : '#CCCCCC'}
-            style={{ marginHorizontal: 2 }}
-          />
-        </TouchableOpacity>
-      );
-    }
-    return <View style={styles.starContainer}>{stars}</View>;
-  };
+
+
+const renderStars = (rating, editable = false) => {
+  const filledStar = require('../assets/icons/filled_star.png');
+  const emptyStar = require('../assets/icons/empty_star.png');
+
+  const stars = [];
+  for (let i = 1; i <= 5; i++) {
+    stars.push(
+      <TouchableOpacity
+        key={i}
+        onPress={() => editable && setNewRating(i)}
+        disabled={!editable}
+      >
+        <Image
+          source={i <= rating ? filledStar : emptyStar}
+          style={{
+            width: 24,
+            height: 24,
+            marginHorizontal: 2,
+          }}
+        />
+      </TouchableOpacity>
+    );
+  }
+
+  return <View style={styles.starContainer}>{stars}</View>;
+};
+
+
+
 
 
   useFocusEffect(
@@ -343,7 +368,7 @@ const GarageDetailScreen = () => {
   </View>
 ))}
 
-{!reviews.some((review) => review.user?._id === user.id || review.user?.id === user.id) && (
+{!reviews.some((review) => review.user?._id === user.id) ? (
   <View style={styles.addReviewContainer}>
     <Text style={styles.sectionTitle}>Add Your Review</Text>
     {renderStars(newRating, true)}
@@ -357,6 +382,8 @@ const GarageDetailScreen = () => {
       <Text style={styles.buttonText}>Submit Review</Text>
     </TouchableOpacity>
   </View>
+) : (
+  <Text style={styles.infoText}>You have already submitted a review for this garage.</Text>
 )}
 
 
@@ -535,6 +562,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#555',
   },
+  infoContainer: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: '#fff8dc',
+    borderRadius: 5,
+    borderColor: '#ffd700',
+    borderWidth: 1,
+  },
+  infoText: {
+    color: '#555',
+    textAlign: 'center',
+    fontSize: 14,
+  },
+  
 });
 
 export default GarageDetailScreen;
