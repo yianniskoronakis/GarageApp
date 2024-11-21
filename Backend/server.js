@@ -39,6 +39,10 @@ app.use('/api/reservations', reservationRoutes);
 const reviewRoutes = require('./routes/review');
 app.use('/api/review', reviewRoutes);
 
+const reportRoutes = require('./routes/report');
+app.use('/api/report', reportRoutes);
+
+
 // Σημείο που επιτρέπει την πρόσβαση στις εικόνες
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 

@@ -69,11 +69,11 @@ router.delete('/:reviewId', verifyToken, async (req, res) => {
     await Review.findByIdAndDelete(req.params.reviewId);
 
     // Υπολογισμός νέου μέσου όρου μετά τη διαγραφή
-    const reviews = await Review.find({ garage: review.garage });
-    const averageRating =
-      reviews.length > 0
-        ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
-        : 0;
+    const reviews = await Review.find({ garage: garageId });
+    const averageRating = reviews.reduce((sum, review) => sum + review.rating, 0) / (reviews.length || 1);
+
+res.status(200).json({ reviews, averageRating });
+
 
     res.status(200).json({ message: 'Review deleted', averageRating });
   } catch (error) {

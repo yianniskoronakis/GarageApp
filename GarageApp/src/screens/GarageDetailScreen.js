@@ -390,6 +390,16 @@ const renderStars = (rating, editable = false) => {
   <Text style={styles.infoText}>You cannot review your own garage.</Text>
 )}
 
+{!isOwner && (
+  <TouchableOpacity
+    style={[styles.button, { backgroundColor: '#FF5733' }]}
+    onPress={() => navigation.navigate('Report', { garageId })}
+  >
+    <Text style={styles.buttonText}>Report Garage</Text>
+  </TouchableOpacity>
+)}
+
+
 
 
     </ScrollView>
