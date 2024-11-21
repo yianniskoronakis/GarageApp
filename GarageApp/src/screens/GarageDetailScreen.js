@@ -368,23 +368,28 @@ const renderStars = (rating, editable = false) => {
   </View>
 ))}
 
-{!reviews.some((review) => review.user?._id === user.id) ? (
-  <View style={styles.addReviewContainer}>
-    <Text style={styles.sectionTitle}>Add Your Review</Text>
-    {renderStars(newRating, true)}
-    <TextInput
-      style={styles.input}
-      placeholder="Leave a comment"
-      value={newComment}
-      onChangeText={(value) => setNewComment(value)}
-    />
-    <TouchableOpacity style={styles.button} onPress={handleSubmitReview}>
-      <Text style={styles.buttonText}>Submit Review</Text>
-    </TouchableOpacity>
-  </View>
+{!isOwner ? (
+  !reviews.some((review) => review.user?._id === user.id) ? (
+    <View style={styles.addReviewContainer}>
+      <Text style={styles.sectionTitle}>Add Your Review</Text>
+      {renderStars(newRating, true)}
+      <TextInput
+        style={styles.input}
+        placeholder="Leave a comment"
+        value={newComment}
+        onChangeText={(value) => setNewComment(value)}
+      />
+      <TouchableOpacity style={styles.button} onPress={handleSubmitReview}>
+        <Text style={styles.buttonText}>Submit Review</Text>
+      </TouchableOpacity>
+    </View>
+  ) : (
+    <Text style={styles.infoText}>You have already submitted a review for this garage.</Text>
+  )
 ) : (
-  <Text style={styles.infoText}>You have already submitted a review for this garage.</Text>
+  <Text style={styles.infoText}>You cannot review your own garage.</Text>
 )}
+
 
 
     </ScrollView>
