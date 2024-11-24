@@ -34,6 +34,8 @@ import com.zoontek.rnpermissions.RNPermissionsPackage;
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 // react-native-screens
 import com.swmansion.rnscreens.RNScreensPackage;
+// react-native-snackbar
+import com.azendoo.reactnativesnackbar.SnackbarPackage;
 // react-native-svg
 import com.horcrux.svg.SvgPackage;
 // react-native-vector-icons
@@ -95,6 +97,7 @@ public class PackageList {
       new RNPermissionsPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
+      new SnackbarPackage(),
       new SvgPackage(),
       new VectorIconsPackage()
     ));

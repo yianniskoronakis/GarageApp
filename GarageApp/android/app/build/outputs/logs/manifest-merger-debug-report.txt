@@ -17,6 +17,7 @@ MERGED from [:react-native-image-picker] C:\Users\koron\Desktop\App\GarageApp\no
 MERGED from [:react-native-linear-gradient] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-linear-gradient\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-maps] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-maps\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-permissions] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-permissions\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-snackbar] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-snackbar\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-svg] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-vector-icons] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:react-android:0.75.3] C:\Users\koron\.gradle\caches\8.8\transforms\86db8f18b4485bd6ddebce5ec150885a\transformed\jetified-react-android-0.75.3-debug\AndroidManifest.xml:2:1-24:12
@@ -253,6 +254,8 @@ MERGED from [:react-native-maps] C:\Users\koron\Desktop\App\GarageApp\node_modul
 MERGED from [:react-native-maps] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-maps\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-permissions] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-permissions\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-permissions] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-permissions\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-snackbar] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-snackbar\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-snackbar] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-snackbar\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-svg] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-svg] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-vector-icons] C:\Users\koron\Desktop\App\GarageApp\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44

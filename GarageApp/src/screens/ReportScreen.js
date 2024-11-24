@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import Snackbar from 'react-native-snackbar';
 import config from '../config';
 
 const ReportScreen = ({ route, navigation }) => {
@@ -8,13 +9,14 @@ const ReportScreen = ({ route, navigation }) => {
 
   const handleSubmitReport = async () => {
     if (!reportText.trim()) {
-      Alert.alert('Error', 'Please provide details for the report.');
+      Snackbar.show({
+        text: 'Please provide details for the report.',
+        duration: Snackbar.LENGTH_SHORT,
+        backgroundColor: 'red', // Προαιρετικά για χρωματική προσαρμογή
+      });
       return;
     }
-  
-    console.log('Submitting report for garageId:', garageId); // Προσθήκη καταγραφής
-    console.log('Report Text:', reportText); // Προσθήκη καταγραφής
-  
+
     try {
       const response = await fetch(`${config.server.baseUrl}/api/report`, {
         method: 'POST',
@@ -23,21 +25,33 @@ const ReportScreen = ({ route, navigation }) => {
         },
         body: JSON.stringify({ garageId, reportText }),
       });
-  
+
       if (response.ok) {
-        Alert.alert('Success', 'Your report has been submitted successfully.');
-        navigation.goBack();
+        Snackbar.show({
+          text: 'Your report has been submitted successfully!',
+          duration: Snackbar.LENGTH_SHORT,
+          backgroundColor: 'green', // Προαιρετικά για χρωματική προσαρμογή
+        });
+        navigation.goBack(); // Επιστροφή στην προηγούμενη οθόνη
       } else {
         const errorData = await response.json();
-        console.error('Error Response:', errorData); // Προσθήκη καταγραφής
-        Alert.alert('Error', errorData.error || 'Failed to submit report.');
+        console.error('Error Response:', errorData); // Καταγραφή σφάλματος
+        Snackbar.show({
+          text: errorData.error || 'Failed to submit report.',
+          duration: Snackbar.LENGTH_LONG,
+          backgroundColor: 'red',
+        });
       }
     } catch (error) {
       console.error('Error submitting report:', error);
-      Alert.alert('Error', 'Failed to submit report.');
+      Snackbar.show({
+        text: 'An error occurred while submitting the report.',
+        duration: Snackbar.LENGTH_LONG,
+        backgroundColor: 'red',
+      });
     }
   };
-  
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Report Garage</Text>

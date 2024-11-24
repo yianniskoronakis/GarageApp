@@ -52,35 +52,32 @@ router.post('/', verifyToken, async (req, res) => {
 });
 
 
-// DELETE: Διαγραφή ενός review
-router.delete('/:reviewId', verifyToken, async (req, res) => {
-  try {
-    const review = await Review.findById(req.params.reviewId);
+router.delete('/:reviewId', async (req, res) => {
+  const { reviewId } = req.params;
 
-    if (!review) {
+  if (!reviewId) {
+    return res.status(400).json({ error: 'Review ID is required' });
+  }
+
+  try {
+    const deletedReview = await Review.findByIdAndDelete(reviewId);
+    if (!deletedReview) {
       return res.status(404).json({ error: 'Review not found' });
     }
 
-    if (review.user.toString() !== req.user._id.toString()) {
-      return res.status(403).json({ error: 'You are not authorized to delete this review' });
-    }
+    // Αν θέλεις να υπολογίσεις ξανά τον μέσο όρο βαθμολογίας
+    const reviews = await Review.find({ garage: deletedReview.garage });
+    const averageRating = reviews.length
+      ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
+      : 0;
 
-    // Διαγραφή του review
-    await Review.findByIdAndDelete(req.params.reviewId);
-
-    // Υπολογισμός νέου μέσου όρου μετά τη διαγραφή
-    const reviews = await Review.find({ garage: garageId });
-    const averageRating = reviews.reduce((sum, review) => sum + review.rating, 0) / (reviews.length || 1);
-
-res.status(200).json({ reviews, averageRating });
-
-
-    res.status(200).json({ message: 'Review deleted', averageRating });
+    return res.status(200).json({ message: 'Review deleted', averageRating });
   } catch (error) {
     console.error('Error deleting review:', error);
-    res.status(500).json({ error: 'Failed to delete review' });
+    return res.status(500).json({ error: 'Failed to delete review' });
   }
 });
+
 
 
 module.exports = router;

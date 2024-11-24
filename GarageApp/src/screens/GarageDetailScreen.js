@@ -10,7 +10,7 @@ import {
   ScrollView, 
   Image 
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Snackbar from 'react-native-snackbar';
 import { useGarage } from '../context/GarageContext';
 import { useAuth } from '../context/AuthContext'; 
 import { useRoute, useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -130,7 +130,10 @@ const GarageDetailScreen = () => {
 
   const handleSubmitReview = async () => {
     if (!newRating || newRating < 1 || newRating > 5) {
-      alert('Please provide a rating between 1 and 5.');
+      Snackbar.show({
+        text: 'Please provide a rating between 1 and 5.',
+        duration: Snackbar.LENGTH_SHORT,
+      });
       return;
     }
   
@@ -152,24 +155,31 @@ const GarageDetailScreen = () => {
       const result = await response.json();
   
       if (response.ok) {
-        // Ενημέρωση του state με το νέο review
         setReviews((prev) => [...prev, { ...result.review, user: { _id: user.id, firstname: user.firstname, lastname: user.lastname } }]);
         setAverageRating(result.averageRating);
-  
-        // Καθαρισμός των πεδίων
         setNewRating('');
         setNewComment('');
+  
+        Snackbar.show({
+          text: 'Review submitted successfully!',
+          duration: Snackbar.LENGTH_SHORT,
+        });
       } else {
         console.error('Failed to submit review:', result.error);
-        alert(result.error || 'Failed to submit review.');
+        Snackbar.show({
+          text: result.error || 'Failed to submit review.',
+          duration: Snackbar.LENGTH_LONG,
+        });
       }
     } catch (error) {
       console.error('Error submitting review:', error);
-      alert('Failed to submit review.');
+      Snackbar.show({
+        text: 'An error occurred while submitting the review.',
+        duration: Snackbar.LENGTH_LONG,
+      });
     }
   };
   
-
   const handleDeleteReview = async (reviewId) => {
     try {
       const token = await AsyncStorage.getItem('token');
@@ -184,22 +194,23 @@ const GarageDetailScreen = () => {
         const updatedReviews = reviews.filter((review) => review._id !== reviewId);
         setReviews(updatedReviews);
   
-        // Υπολογισμός νέου μέσου όρου
         const newAverage = updatedReviews.length
           ? updatedReviews.reduce((sum, r) => sum + r.rating, 0) / updatedReviews.length
           : 0;
   
         setAverageRating(newAverage);
+  
+        console.log('Review deleted successfully');
       } else {
-        alert('Failed to delete review.');
+        const errorData = await response.json();
+        console.error('Failed to delete review:', errorData.error);
       }
     } catch (error) {
       console.error('Error deleting review:', error);
-      alert('Failed to delete review.');
     }
   };
   
-
+  
 
 
 const renderStars = (rating, editable = false) => {
