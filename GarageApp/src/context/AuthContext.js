@@ -1,8 +1,7 @@
-// context/AuthContext.js
 import React, { createContext, useState, useContext } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import config from '../config'; // Εισάγετε το αρχείο config
+import config from '../config'; 
 
 const AuthContext = createContext();
 
@@ -102,7 +101,7 @@ export const AuthProvider = ({ children }) => {
       });
   
       if (!response.ok) {
-        const errorData = await response.json(); // Αποθήκευση του σφάλματος
+        const errorData = await response.json(); 
         console.error('Error data:', errorData);
         throw new Error('Failed to like garage');
       }
@@ -133,7 +132,7 @@ export const AuthProvider = ({ children }) => {
       }
 
       const data = await response.json();
-      setLikedGarages(data.likedGarages); // Ενημέρωση των liked garages
+      setLikedGarages(data.likedGarages); 
       return data.message;
     } catch (error) {
       console.error('Error unliking garage:', error);

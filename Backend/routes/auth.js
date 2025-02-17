@@ -5,11 +5,10 @@ const User = require('../models/User');
 
 const router = express.Router();
 
-// Middleware για επαλήθευση του token
 const verifyToken = (req, res, next) => {
   const token = req.header('Authorization')?.replace('Bearer ', '');
   console.log("Token received in backend:", token);
-  // Για να δεις τι παίρνει ο server
+ 
   if (!token) return res.status(401).json({ message: 'Access Denied' });
 
   try {
@@ -23,7 +22,6 @@ const verifyToken = (req, res, next) => {
 };
 
 
-// Route για εγγραφή
 router.post('/register', async (req, res) => {
   const { username, password, email, phone, firstname, lastname } = req.body;
 
@@ -56,7 +54,6 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Route για σύνδεση
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
@@ -75,7 +72,7 @@ router.post('/login', async (req, res) => {
       return res.status(400).json({ message: 'Invalid username or password' });
     }
 
-    // Δημιουργία και αποστολή token
+
     const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
 
     console.log("Generated token: ", token);
@@ -98,12 +95,11 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Route για αποσύνδεση
 router.post('/logout', (req, res) => {
   res.json({ message: 'Logged out successfully' });
 });
 
-// Route για διαγραφή λογαριασμού (χρειάζεται token)
+
 router.delete('/delete', verifyToken, async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.user._id);
@@ -117,7 +113,7 @@ router.delete('/delete', verifyToken, async (req, res) => {
   }
 });
 
-// Route για αλλαγή κωδικού (χρειάζεται token)
+
 router.put('/change-password', verifyToken, async (req, res) => {
   const { oldPassword, newPassword } = req.body;
 
@@ -146,7 +142,7 @@ router.get('/test-token', verifyToken, (req, res) => {
   res.json({ message: 'Token is valid', user: req.user });
 });
 
-// Route για like σε garage
+
 router.post('/like/:garageId', verifyToken, async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
@@ -166,7 +162,7 @@ router.post('/like/:garageId', verifyToken, async (req, res) => {
   }
 });
 
-// Route για unlike σε garage
+
 router.post('/unlike/:garageId', verifyToken, async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
@@ -188,5 +184,5 @@ router.post('/unlike/:garageId', verifyToken, async (req, res) => {
 
 
 
-// Εξαγωγή του router και του middleware verifyToken
+
 module.exports = { router, verifyToken };

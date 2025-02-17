@@ -12,7 +12,6 @@ const ReservationScreen = ({ navigation, route }) => {
     const [selectedSlots, setSelectedSlots] = useState([]);
     const [userReservations, setUserReservations] = useState([]);
 
-    // Συνάρτηση για φόρτωση κρατήσεων χρήστη
     const fetchUserReservations = async () => {
         try {
             const response = await fetch(`${config.server.baseUrl}/api/reservations/userReservations/${user.id}`, {
@@ -23,7 +22,7 @@ const ReservationScreen = ({ navigation, route }) => {
             const data = await response.json();
             if (response.ok) {
                 setUserReservations(data.userReservations);
-                console.log("User Reservations:", data.userReservations); // Προσθήκη για έλεγχο
+                console.log("User Reservations:", data.userReservations); 
             } else {
                 Alert.alert('Σφάλμα', data.message || 'Πρόβλημα στην ανάκτηση των κρατήσεων.');
             }
@@ -33,7 +32,7 @@ const ReservationScreen = ({ navigation, route }) => {
         }
     };    
 
-    // Συνάρτηση για φόρτωση διαθέσιμων slots
+
         const fetchAvailableSlots = async () => {
             try {
                 const response = await fetch(`${config.server.baseUrl}/api/garages/${garageId}/availableSlots`, {
@@ -43,7 +42,7 @@ const ReservationScreen = ({ navigation, route }) => {
                 });
                 const data = await response.json();
                 if (response.ok) {
-                    setAvailableSlots(data.availableHours); // Ενημέρωση των διαθέσιμων ωρών
+                    setAvailableSlots(data.availableHours); 
                 } else {
                     Alert.alert('Σφάλμα', data.message || 'Πρόβλημα στην ανάκτηση των slots.');
                 }
@@ -54,18 +53,17 @@ const ReservationScreen = ({ navigation, route }) => {
         };
     
 
-    // Κλήση των fetch λειτουργιών κατά την εκκίνηση
     useEffect(() => {
         fetchUserReservations(); 
         fetchAvailableSlots();
         const interval = setInterval(() => {
-            fetchAvailableSlots(); // Ανανεώνει τις διαθέσιμες ώρες κάθε 15 λεπτά
-        }, 900000); // 900000 ms = 15 λεπτά
+            fetchAvailableSlots(); 
+        }, 900000); 
     
         return () => clearInterval(interval);
     }, [garageId, user.id]);
 
-    // Λειτουργία επιλογής/αποεπιλογής slot
+   
     const toggleSlotSelection = (slot) => {
         if (selectedSlots.includes(slot)) {
             setSelectedSlots(selectedSlots.filter(s => s !== slot));
@@ -74,7 +72,7 @@ const ReservationScreen = ({ navigation, route }) => {
         }
     };
 
-    // Επιβεβαίωση κράτησης
+   
     const handleConfirmReservation = async () => {
         if (selectedSlots.length === 0) {
             Alert.alert('Παρακαλώ επιλέξτε τουλάχιστον ένα χρονικό διάστημα');
@@ -98,8 +96,8 @@ const ReservationScreen = ({ navigation, route }) => {
             const data = await response.json();
             if (response.ok) {
                 setSelectedSlots([]);
-                fetchAvailableSlots(); // Ανανεώνουμε τις διαθέσιμες ώρες
-                fetchUserReservations(); // Επαναφόρτωση των κρατήσεων
+                fetchAvailableSlots(); 
+                fetchUserReservations(); 
             } else {
                 Alert.alert('Σφάλμα', data.message || 'Σφάλμα κατά την κράτηση.');
             }
@@ -111,7 +109,7 @@ const ReservationScreen = ({ navigation, route }) => {
     
     
 
-    // Ακύρωση κράτησης
+
     const handleCancelReservation = async (reservationId) => {
         try {
             const response = await fetch(`${config.server.baseUrl}/api/reservations/${reservationId}/cancel`, {
@@ -123,7 +121,7 @@ const ReservationScreen = ({ navigation, route }) => {
 
             const data = await response.json();
             if (response.ok) {
-                fetchUserReservations(); // Επαναφόρτωση των κρατήσεων μετά από διαγραφή
+                fetchUserReservations(); 
             } else {
                 Alert.alert('Σφάλμα', data.message || 'Σφάλμα κατά τη διαγραφή της κράτησης.');
             }
@@ -133,7 +131,7 @@ const ReservationScreen = ({ navigation, route }) => {
         }
     };
 
-    // Προβολή slot για κράτηση
+   
     const renderTimeSlot = ({ item }) => (
         <TouchableOpacity
             style={{
@@ -148,7 +146,7 @@ const ReservationScreen = ({ navigation, route }) => {
         </TouchableOpacity>
     );
 
-    // Προβολή κράτησης χρήστη
+   
     const renderUserReservation = ({ item }) => (
         <View style={styles.reservationItem}>
             <Text>

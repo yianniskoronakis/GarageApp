@@ -30,7 +30,6 @@ export const GarageProvider = ({ children }) => {
       const data = await response.json();
       console.log('Fetched garages:', data);
 
-      // Check and set valid coordinates for each garage
       const validGarages = data.filter(garage => {
         return !isNaN(Number(garage.latitude)) && !isNaN(Number(garage.longitude));
       });
@@ -90,7 +89,6 @@ export const GarageProvider = ({ children }) => {
     }
   };
 
-  // Inside your GarageContext
 const fetchLikedGarages = async () => {
   try {
     const token = await AsyncStorage.getItem('token');
@@ -108,7 +106,7 @@ const fetchLikedGarages = async () => {
     }
 
     const data = await response.json();
-    setLikedGarages(data); // Make sure to update the liked garages state
+    setLikedGarages(data); 
   } catch (error) {
     console.error('Error fetching liked garages:', error);
   }
@@ -148,7 +146,7 @@ const fetchLikedGarages = async () => {
         },
         body: formData,
       });
-      // Έλεγχος αν η response είναι ορισμένη
+
       if (!response) {
         throw new Error('No response from server');
       }
@@ -160,7 +158,7 @@ const fetchLikedGarages = async () => {
       }
   
       const newGarage = await response.json();
-      setGarages(prevGarages => [...prevGarages, newGarage]);  // Προσθήκη του νέου γκαράζ στην κατάσταση
+      setGarages(prevGarages => [...prevGarages, newGarage]);  
     } catch (error) {
       console.error('Error creating garage:', error);
       setError('Failed to create garage');
@@ -169,7 +167,7 @@ const fetchLikedGarages = async () => {
   };
   
 
-  // Delete a garage
+
   const deleteGarage = async (garageId) => {
     try {
       const token = await AsyncStorage.getItem('token');
@@ -184,7 +182,6 @@ const fetchLikedGarages = async () => {
         throw new Error('Failed to delete garage');
       }
 
-      // Remove the deleted garage from state
       setGarages(prevGarages => prevGarages.filter(garage => garage._id !== garageId));
     } catch (error) {
       console.error('Error deleting garage:', error);
@@ -210,8 +207,7 @@ const fetchLikedGarages = async () => {
         throw new Error(errorResponse.message || 'Failed to update garage');
       }
   
-      // Update το garage στο state με τα νέα δεδομένα
-      const updatedGarage = await response.json(); // Προσθήκη αυτής της γραμμής
+      const updatedGarage = await response.json(); 
       setGarages(prevGarages =>
         prevGarages.map(garage => (garage._id === garageId ? updatedGarage : garage))
       );
@@ -238,7 +234,7 @@ const fetchLikedGarages = async () => {
       }
   
       const data = await response.json();
-      return data.reservations; // Assuming response returns an array of reservations
+      return data.reservations; 
     } catch (error) {
       console.error('Error fetching reservations:', error);
       throw error;

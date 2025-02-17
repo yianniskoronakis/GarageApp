@@ -7,8 +7,8 @@ const garageSchema = new mongoose.Schema({
   garagetype:{type: Boolean, required: true},
   maxheight:{type: Number, required: false},
   description:{type: String, required: false},
-  latitude: { type: Number, required: true},  // Προσθήκη συντεταγμένων
-  longitude: { type: Number, required: true }, // Προσθήκη συντεταγμένων
+  latitude: { type: Number, required: true},  
+  longitude: { type: Number, required: true }, 
   photos: { type: [String], required: true },
   availableHours: [String],
   owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },

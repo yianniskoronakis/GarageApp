@@ -34,10 +34,10 @@ const GarageDetailScreen = () => {
   const [description, setDescription] = useState('');
   const [loading, setLoading] = useState(true);
   const [isLiked, setIsLiked] = useState(false);
-  const [reservations, setReservations] = useState([]); // State for reservations
+  const [reservations, setReservations] = useState([]); 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Review-related states
+  
   const [reviews, setReviews] = useState([]);
   const [averageRating, setAverageRating] = useState(0);
   const [newRating, setNewRating] = useState('');
@@ -59,7 +59,7 @@ const GarageDetailScreen = () => {
         setReviews(data.reviews);
         setAverageRating(data.averageRating);
     
-        // Έλεγχος αν ο χρήστης έχει ήδη κάνει review
+       
         const userReview = data.reviews.find((review) => review.user._id === user.id);
         if (userReview) {
           setNewRating(userReview.rating);
@@ -508,7 +508,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     marginVertical: 10,
-    marginHorizontal: 16, // Add horizontal margin to prevent touching the edges
+    marginHorizontal: 16, 
   },
   buttonText: {
     color: 'white',

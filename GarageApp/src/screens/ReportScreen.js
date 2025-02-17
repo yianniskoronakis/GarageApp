@@ -4,7 +4,7 @@ import Snackbar from 'react-native-snackbar';
 import config from '../config';
 
 const ReportScreen = ({ route, navigation }) => {
-  const { garageId } = route.params; // Λαμβάνουμε το ID του garage
+  const { garageId } = route.params; 
   const [reportText, setReportText] = useState('');
 
   const handleSubmitReport = async () => {
@@ -12,7 +12,7 @@ const ReportScreen = ({ route, navigation }) => {
       Snackbar.show({
         text: 'Please provide details for the report.',
         duration: Snackbar.LENGTH_SHORT,
-        backgroundColor: 'red', // Προαιρετικά για χρωματική προσαρμογή
+        backgroundColor: 'red', 
       });
       return;
     }
@@ -30,12 +30,12 @@ const ReportScreen = ({ route, navigation }) => {
         Snackbar.show({
           text: 'Your report has been submitted successfully!',
           duration: Snackbar.LENGTH_SHORT,
-          backgroundColor: 'green', // Προαιρετικά για χρωματική προσαρμογή
+          backgroundColor: 'green', 
         });
-        navigation.goBack(); // Επιστροφή στην προηγούμενη οθόνη
+        navigation.goBack(); 
       } else {
         const errorData = await response.json();
-        console.error('Error Response:', errorData); // Καταγραφή σφάλματος
+        console.error('Error Response:', errorData); 
         Snackbar.show({
           text: errorData.error || 'Failed to submit report.',
           duration: Snackbar.LENGTH_LONG,

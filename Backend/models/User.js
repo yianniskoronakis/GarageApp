@@ -1,4 +1,4 @@
-// App/Backend/models/User.js
+
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
   phone: { type: String },
   firstname: { type: String },
   lastname: { type: String },
-  likedGarages: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Garage' }] // Νέο πεδίο για τα liked garages
+  likedGarages: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Garage' }] 
 });
 
 module.exports = mongoose.model('User', UserSchema);

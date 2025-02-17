@@ -6,17 +6,17 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const WishlistScreen = ({ navigation }) => {
   const { fetchLikedGarages, likedGarages } = useGarage();
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(''); // Added error state
+  const [error, setError] = useState(''); 
 
   useEffect(() => {
     const loadLikedGarages = async () => {
       setLoading(true);
       try {
         const token = await AsyncStorage.getItem('token');
-        await fetchLikedGarages(token); // Fetch liked garages
+        await fetchLikedGarages(token); 
       } catch (error) {
         console.error('Error fetching liked garages:', error);
-        setError('Failed to load liked garages. Please try again later.'); // Set error message
+        setError('Failed to load liked garages. Please try again later.');
       } finally {
         setLoading(false);
       }
@@ -31,7 +31,7 @@ const WishlistScreen = ({ navigation }) => {
         <ActivityIndicator size="large" color="#007BFF" />
         <Text style={styles.loadingText}>Loading...</Text>
       </View>
-    ); // Display loading indicator
+    ); 
   }
 
   if (error) {
@@ -39,7 +39,7 @@ const WishlistScreen = ({ navigation }) => {
       <View style={styles.errorContainer}>
         <Text style={styles.errorText}>{error}</Text>
       </View>
-    ); // Display error message if any
+    ); 
   }
 
   return (
@@ -51,14 +51,14 @@ const WishlistScreen = ({ navigation }) => {
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.garageItem}
-            onPress={() => navigation.navigate('GarageDetail', { garageId: item._id })} // Navigate to GarageDetailScreen
+            onPress={() => navigation.navigate('GarageDetail', { garageId: item._id })} 
           >
             <Text style={styles.garageName}>{item.name}</Text>
             <Text style={styles.garageAddress}>{item.address}</Text>
             <Text style={styles.garagePrice}>{item.price}</Text>
           </TouchableOpacity>
         )}
-        ListEmptyComponent={<Text style={styles.emptyMessage}>No liked garages found.</Text>} // Handle empty state
+        ListEmptyComponent={<Text style={styles.emptyMessage}>No liked garages found.</Text>}
       />
     </View>
   );
@@ -68,13 +68,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#f7f9fc', // Light background for better contrast
+    backgroundColor: '#f7f9fc', 
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: '#333', // Dark color for title
+    color: '#333', 
   },
   garageItem: {
     padding: 15,
@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     borderWidth: 1,
     borderRadius: 10,
-    backgroundColor: '#ffffff', // White background for garage items
-    elevation: 2, // Shadow for Android
+    backgroundColor: '#ffffff', 
+    elevation: 2, 
   },
   garageName: {
     fontSize: 18,
@@ -91,12 +91,12 @@ const styles = StyleSheet.create({
   },
   garageAddress: {
     fontSize: 16,
-    color: '#555', // Darker grey for address
+    color: '#555', 
   },
   garagePrice: {
     fontSize: 16,
-    color: '#007BFF', // Blue color for price
-    fontWeight: '600', // Semi-bold for price
+    color: '#007BFF', 
+    fontWeight: '600', 
   },
   loadingContainer: {
     flex: 1,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   emptyMessage: {
     textAlign: 'center',
     fontSize: 16,
-    color: '#888', // Light gray for empty message
+    color: '#888', 
   },
 });
 

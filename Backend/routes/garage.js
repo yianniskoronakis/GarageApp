@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const Garage = require('../models/Garage');
 const User = require('../models/User');
-const { verifyToken } = require('./auth');  // Χρήση του verifyToken από το auth
+const { verifyToken } = require('./auth');  
 require('dotenv').config();
 const router = express.Router();
 const axios = require('axios');
@@ -26,10 +26,10 @@ const geocodeAddress = async (address) => {
       }
 
       const location = response.data.results[0].geometry.location;
-      console.log(`Geocoded location for address "${address}":`, location); // Log the geocoded location
+      console.log(`Geocoded location for address "${address}":`, location); 
       return {
-          latitude: location.lat,   // Επιστρέφει τη γεωγραφική θέση
-          longitude: location.lng    // Επιστρέφει τη γεωγραφική θέση
+          latitude: location.lat,   
+          longitude: location.lng    
       }; 
   } catch (error) {
       console.error('Error in geocodeAddress:', error);
@@ -38,22 +38,22 @@ const geocodeAddress = async (address) => {
 };
 
 
-// Ρυθμίσεις του multer
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads/'); // Φάκελος όπου θα αποθηκεύονται οι εικόνες
+    cb(null, 'uploads/'); 
   },
   filename: (req, file, cb) => {
-    cb(null, `${Date.now()}-${file.originalname}`); // Όνομα αρχείου
+    cb(null, `${Date.now()}-${file.originalname}`); 
   }
 });
 
 const upload = multer({ storage });
 
-// Δημιουργία νέου γκαράζ
+
 router.post('/create', verifyToken, upload.fields([{ name: 'photo_0' }, { name: 'photo_1' }, { name: 'photo_2' }, { name: 'photo_3' }, { name: 'photo_4' }]), async (req, res) => {
-  console.log("Request body:", req.body); // Log the incoming request body
-  console.log("Files:", req.files); // Log the files received
+  console.log("Request body:", req.body); 
+  console.log("Files:", req.files); 
 
   const address = req.body.address ? req.body.address.trim() : undefined;
   const price = req.body.price !== undefined ? Number(req.body.price) : undefined;
@@ -69,10 +69,10 @@ router.post('/create', verifyToken, upload.fields([{ name: 'photo_0' }, { name: 
   }
 
   try {
-    const location = await geocodeAddress(address); // Καλείς τη γεωκωδικοποίηση
-    const latitude = location.latitude;   // Εξαγωγή της γεωγραφικής θέσης
-    const longitude = location.longitude;  // Εξαγωγή της γεωγραφικής θέσης
-    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`); // Log the coordinates
+    const location = await geocodeAddress(address); 
+    const latitude = location.latitude;   
+    const longitude = location.longitude;  
+    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
 
     const newGarage = new Garage({
         price,
@@ -82,39 +82,39 @@ router.post('/create', verifyToken, upload.fields([{ name: 'photo_0' }, { name: 
         maxheight,
         description,
         photos,
-        latitude, // Χρησιμοποιείς τις σωστές τιμές
-        longitude, // Χρησιμοποιείς τις σωστές τιμές
+        latitude, 
+        longitude, 
         owner: req.user._id,
     });
 
     await newGarage.save();
     res.status(201).json(newGarage);
 } catch (error) {
-    console.error('Error creating garage:', error.message); // Log specific error message
+    console.error('Error creating garage:', error.message); 
     res.status(500).json({ message: 'Server error', error: error.message });
 }
 
 });
 
-// Διαγραφή γκαράζ
+
 router.delete('/delete/:id', verifyToken, async (req, res) => {
   try {
-    // Βρίσκεις το γκαράζ με βάση το ID
+
     const garage = await Garage.findById(req.params.id);
 
     if (!garage) {
       return res.status(404).json({ message: 'Garage not found' });
     }
 
-    // Διαγραφή των φωτογραφιών που ανήκουν στο γκαράζ
+    
     if (garage.photos && garage.photos.length > 0) {
       garage.photos.forEach(photo => {
         const filePath = path.join(__dirname, '..', 'uploads', photo);
         
-        // Έλεγχος αν το αρχείο υπάρχει πριν το διαγράψεις
+       
         fs.access(filePath, fs.constants.F_OK, (err) => {
           if (!err) {
-            // Διαγραφή του αρχείου
+            
             fs.unlink(filePath, (err) => {
               if (err) {
                 console.error(`Error deleting file ${filePath}:`, err);
@@ -129,7 +129,7 @@ router.delete('/delete/:id', verifyToken, async (req, res) => {
       });
     }
 
-    // Διαγραφή του γκαράζ από τη βάση δεδομένων
+
     await Garage.findByIdAndDelete(req.params.id);
     res.json({ message: 'Garage and its photos deleted successfully' });
   } catch (error) {
@@ -138,24 +138,23 @@ router.delete('/delete/:id', verifyToken, async (req, res) => {
   }
 });
 
-// Ανάκτηση όλων των γκαράζ
+
 router.get('/', verifyToken, async (req, res) => {
   try {
     const userId = req.user._id;
-    const garages = await Garage.find(); // Εύρεση όλων των γκαράζ
-    res.json(garages); // Επιστροφή των δεδομένων γκαράζ ως JSON
+    const garages = await Garage.find(); 
+    res.json(garages); 
   } catch (error) {
     console.error('Error fetching all garages:', error);
     res.status(500).json({ message: 'Server error' });
   }
 });
 
-// Ανάκτηση των γκαράζ του συνδεδεμένου χρήστη
+
 router.get('/mygarages', verifyToken, async (req, res) => {
   try {
-    const userId = req.user._id;  // req.user._id από το token
+    const userId = req.user._id; 
 
-    // Εύρεση των γκαράζ που ανήκουν στον συνδεδεμένο χρήστη
     const mygarages = await Garage.find({ owner: userId });
     res.json(mygarages);
   } catch (error) {
@@ -164,42 +163,42 @@ router.get('/mygarages', verifyToken, async (req, res) => {
   }
 });
 
-// Ενημέρωση γκαράζ
+
 router.put('/update/:id', verifyToken, async (req, res) => {
   try {
-    const {price} = req.body; // Destructure properties from the request body
+    const {price} = req.body; 
     
-    // Εύρεση του γκαράζ με βάση το ID
+    
     let garage = await Garage.findById(req.params.id);
     
     if (!garage) {
       return res.status(404).json({ message: 'Garage not found' });
     }
 
-    // Ενημέρωση μόνο των πεδίων που έχουν σταλεί στο request
+    
     garage.price = price || garage.price;
 
-    // Αποθήκευση του ενημερωμένου γκαράζ
+    
     await garage.save();
     
-    res.json(garage); // Επιστροφή του ενημερωμένου γκαράζ
+    res.json(garage); 
   } catch (error) {
-    console.error('Error updating garage:', error); // Καταγραφή σφαλμάτων
-    res.status(500).json({ message: 'Server error' }); // Επιστροφή σφάλματος σε περίπτωση αποτυχίας
+    console.error('Error updating garage:', error); 
+    res.status(500).json({ message: 'Server error' }); 
   }
 });
 
 router.get('/wishlist', verifyToken, async (req, res) => {
   try {
-      const userId = req.user._id; // Get the user ID from the request
-      const user = await User.findById(userId).populate('likedGarages'); // Fetch user and populate liked garages
+      const userId = req.user._id; 
+      const user = await User.findById(userId).populate('likedGarages'); 
       
       if (!user) {
           console.error('User not found while fetching liked garages');
           return res.status(404).json({ message: 'User not found' });
       }
       
-      res.json(user.likedGarages); // Return liked garages
+      res.json(user.likedGarages);
   } catch (error) {
       console.error('Error fetching liked garages:', error);
       res.status(500).json({ message: 'Server error', error: error.message });
@@ -207,22 +206,22 @@ router.get('/wishlist', verifyToken, async (req, res) => {
 });
 
 
-// Ανάκτηση ενός γκαράζ με βάση το ID
+
 router.get('/:id', verifyToken, async (req, res) => {
   try {
     const garageId = req.params.id;
     
-    // Εύρεση του γκαράζ με βάση το ID
+ 
     const garage = await Garage.findById(garageId);
     
     if (!garage) {
-      return res.status(404).json({ message: 'Garage not found' }); // Επιστροφή μηνύματος αν δεν βρεθεί το γκαράζ
+      return res.status(404).json({ message: 'Garage not found' }); 
     }
     
-    res.json(garage); // Επιστροφή των δεδομένων του γκαράζ
+    res.json(garage);
   } catch (error) {
-    console.error('Error fetching garage details:', error); // Καταγραφή των σφαλμάτων
-    res.status(500).json({ message: 'Server error', error: error.message }); // Επιστροφή μηνύματος σφάλματος
+    console.error('Error fetching garage details:', error); 
+    res.status(500).json({ message: 'Server error', error: error.message }); 
   }
 });
 
@@ -255,16 +254,16 @@ router.get('/:garageId/availableSlots', async (req, res) => {
 
       const availableHours = garage.availableHours || [];
 
-      // Εύρεση δεσμευμένων ωρών για το συγκεκριμένο γκαράζ
+      
       const reservations = await Reservation.find({
           garage: garageId,
           status: 'active',
-          startHour: { $in: availableHours }, // Φιλτράρισμα ωρών που είναι διαθέσιμες αλλά και δεσμευμένες
+          startHour: { $in: availableHours }, 
       });
 
       const reservedHours = reservations.map((reservation) => reservation.startHour);
 
-      // Διαθέσιμες ώρες = ώρες που δεν είναι στις δεσμευμένες
+
       const freeHours = availableHours.filter(hour => !reservedHours.includes(hour));
 
       res.status(200).json({ availableHours: freeHours });
@@ -275,23 +274,23 @@ router.get('/:garageId/availableSlots', async (req, res) => {
 });
 
 
-// Route to fetch reservations for a specific garage
+
 router.get('/:garageId/reservations', verifyToken, async (req, res) => {
   const { garageId } = req.params;
 
   try {
-    // Check if the garage exists
+
     const garage = await Garage.findById(garageId);
     if (!garage) {
       return res.status(404).json({ message: 'Garage not found' });
     }
 
-    // Ensure that only the garage owner can access this information
+
     if (garage.owner.toString() !== req.user._id.toString()) {
       return res.status(403).json({ message: 'Access denied. Only the owner can view reservations.' });
     }
 
-    // Fetch reservations for the garage and populate user details
+
     const reservations = await Reservation.find({ garage: garageId })
       .populate('user', 'firstname lastname phone');
 

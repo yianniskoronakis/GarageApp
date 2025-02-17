@@ -9,13 +9,13 @@ const SetAvailabilityScreen = ({ route, navigation }) => {
     const [availableHours, setAvailableHours] = useState([]);
     const [selectedHours, setSelectedHours] = useState([]);
 
-    // Δημιουργία των slots για το επόμενο 24ωρο ξεκινώντας από την επόμενη πλήρη ώρα
+ 
     useEffect(() => {
         const generateTimeSlots = () => {
             const slots = [];
             let currentTime = new Date();
 
-            // Ρυθμίζουμε το currentTime στην επόμενη πλήρη ώρα
+ 
             currentTime.setHours(currentTime.getHours() + 1);
             currentTime.setMinutes(0);
             currentTime.setSeconds(0);
@@ -24,8 +24,7 @@ const SetAvailabilityScreen = ({ route, navigation }) => {
             for (let i = 0; i < 24; i++) {
                 const slot = `${currentTime.getHours().toString().padStart(2, '0')}:00`;
                 slots.push(slot);
-                currentTime.setHours(currentTime.getHours() + 1); // Προσθέτουμε 1 ώρα για το επόμενο slot
-            }
+                currentTime.setHours(currentTime.getHours() + 1); }
 
             setAvailableHours(slots);
         };
@@ -33,7 +32,7 @@ const SetAvailabilityScreen = ({ route, navigation }) => {
         generateTimeSlots();
     }, []);
 
-    // Διαχείριση επιλογής διαθέσιμων ωρών
+
     const toggleHourSelection = (hour) => {
         if (selectedHours.includes(hour)) {
             setSelectedHours(selectedHours.filter((h) => h !== hour));
@@ -42,7 +41,7 @@ const SetAvailabilityScreen = ({ route, navigation }) => {
         }
     };
 
-    // Αποστολή διαθέσιμων ωρών στο backend
+    
     const handleSetAvailability = async () => {
         try {
             const response = await fetch(`${config.server.baseUrl}/api/garages/${garageId}/setAvailability`, {

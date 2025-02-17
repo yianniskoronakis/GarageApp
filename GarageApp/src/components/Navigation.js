@@ -66,26 +66,26 @@ const AppTabs = () => (
 
         switch (route.name) {
           case 'Map':
-            iconSource = require('../assets/icons/map_icon.png'); // Εικόνα για τον χάρτη
+            iconSource = require('../assets/icons/map_icon.png'); 
             break;
           case 'MyGarages':
-            iconSource = require('../assets/icons/home_icon.png'); // Εικόνα για τα γκαράζ
+            iconSource = require('../assets/icons/home_icon.png'); 
             break;
           case 'CreateGarage':
-            iconSource = require('../assets/icons/addition_icon.png'); // Εικόνα για τη δημιουργία γκαράζ
+            iconSource = require('../assets/icons/addition_icon.png'); 
             break;
           case 'Wishlist':
-            iconSource = require('../assets/icons/heart_icon.png'); // Εικόνα για την επιθυμία
+            iconSource = require('../assets/icons/heart_icon.png'); 
             break;
           case 'Profile':
-            iconSource = require('../assets/icons/profile_icon.png'); // Εικόνα για το προφίλ
+            iconSource = require('../assets/icons/profile_icon.png'); 
             break;
         }
 
         return (
           <Image
             source={iconSource}
-            style={{ width: size, height: size, tintColor: color }} // Τυλίγουμε το χρώμα
+            style={{ width: size, height: size, tintColor: color }}
           />
         );
       },

@@ -13,7 +13,7 @@ const MygaragesScreen = () => {
 
   useEffect(() => {
     handleMyGarages();
-  }, [garages]); // Call only once on initial load
+  }, [garages]);
 
   const handleMyGarages = async () => {
     setLoading(true);
@@ -23,12 +23,12 @@ const MygaragesScreen = () => {
         throw new Error('No token found');
       }
 
-      await fetchMyGarages();  // Call to fetch the user's garages
+      await fetchMyGarages(); 
     } catch (error) {
       console.error('Error fetching garages:', error);
       setError(error.message);
     } finally {
-      setLoading(false); // Complete loading state
+      setLoading(false); 
     }
   };
 
@@ -70,7 +70,7 @@ const MygaragesScreen = () => {
           data={mygarages}
           renderItem={renderGarage}
           keyExtractor={item => item._id}
-          ListEmptyComponent={<Text style={styles.emptyText}>No garages found.</Text>} // Handle empty state
+          ListEmptyComponent={<Text style={styles.emptyText}>No garages found.</Text>} 
         />
       )}
     </View>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#f4f4f4', // Light background for the container
+    backgroundColor: '#f4f4f4',
   },
   loadingContainer: {
     flex: 1,
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   garageItem: {
     marginBottom: 16,
     padding: 16,
-    backgroundColor: '#fff', // White background for each garage item
+    backgroundColor: '#fff', 
     borderRadius: 8,
     elevation: 2,
     shadowColor: '#000',
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     overflow: 'hidden',
     borderWidth: 1,
-    borderColor: '#ddd', // Border color for photos
+    borderColor: '#ddd', 
   },
   error: {
     color: 'red',

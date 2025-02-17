@@ -7,9 +7,8 @@ import Geolocation from '@react-native-community/geolocation';
 
 const { width, height } = Dimensions.get('window');
 
-// Haversine formula to calculate distance in kilometers
 const haversineDistance = (lat1, lon1, lat2, lon2) => {
-  const R = 6371; // Earth's radius in kilometers
+  const R = 6371;
   const dLat = ((lat2 - lat1) * Math.PI) / 180;
   const dLon = ((lon2 - lon1) * Math.PI) / 180;
   const a =
@@ -20,7 +19,6 @@ const haversineDistance = (lat1, lon1, lat2, lon2) => {
   return R * c;
 };
 
-// Custom User Location Marker Component
 const UserLocationMarker = () => (
   <View style={styles.userLocationMarkerContainer}>
     <View style={styles.userLocationMarker}>
@@ -45,7 +43,7 @@ const MapScreen = () => {
   const [isClosedGarage, setIsClosedGarage] = useState(null);
   const [minHeight, setMinHeight] = useState('');
   const [minSquareMeters, setMinSquareMeters] = useState('');
-  const [maxDistance, setMaxDistance] = useState(''); // New state for distance filter
+  const [maxDistance, setMaxDistance] = useState(''); 
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -111,12 +109,10 @@ const MapScreen = () => {
     const meetsHeightCondition = isClosedGarage !== true || !minHeight || garage.maxheight >= minHeight;
     const meetsSquareMetersCondition = !minSquareMeters || garage.squaremeter >= minSquareMeters;
 
-    // Check for at least one unbooked available hour
     const hasAvailableHours = Array.isArray(garage.availableHours) && 
                               garage.availableHours.some(hour => !hour.isBooked);
     const isNotUserGarage = !mygarages.some(myGarage => myGarage._id === garage._id);
 
-    // Calculate distance if userLocation is available
     const distance = userLocation 
       ? haversineDistance(userLocation.latitude, userLocation.longitude, Number(garage.latitude), Number(garage.longitude)) 
       : null;
@@ -127,7 +123,7 @@ const MapScreen = () => {
       meetsTypeCondition &&
       meetsHeightCondition &&
       meetsSquareMetersCondition &&
-      hasAvailableHours && // Only garages with unbooked available hours
+      hasAvailableHours && 
       isNotUserGarage &&
       meetsDistanceCondition
     );

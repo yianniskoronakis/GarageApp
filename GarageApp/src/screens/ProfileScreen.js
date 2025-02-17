@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#f7f9fc', // Light background for better contrast
+    backgroundColor: '#f7f9fc',
   },
   card: {
     width: '90%',
@@ -101,20 +101,20 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    elevation: 5, // For Android shadow
+    elevation: 5, 
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 16,
-    color: '#333', // Dark color for title
-    textAlign: 'center', // Center align title
+    color: '#333', 
+    textAlign: 'center', 
   },
   username: {
     fontSize: 22,
-    color: '#555', // Dark grey for username
+    color: '#555', 
     marginBottom: 20,
-    textAlign: 'center', // Center align username
+    textAlign: 'center', 
   },
   loadingIndicator: {
     marginVertical: 20,

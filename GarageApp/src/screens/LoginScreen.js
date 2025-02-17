@@ -1,4 +1,3 @@
-// screens/LoginScreen.js
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useAuth } from '../context/AuthContext';
@@ -20,9 +19,9 @@ const LoginScreen = () => {
 
     try {
       await login(username, password);
-      setError(''); // Clear error on successful login
+      setError(''); 
     } catch (error) {
-      console.error('Login Error:', error); // Log error for debugging
+      console.error('Login Error:', error); 
       setError('Invalid username or password');
     }
   };
@@ -64,7 +63,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#f4f4f4', // Light background color
+    backgroundColor: '#f4f4f4',
   },
   title: {
     fontSize: 32,
@@ -80,7 +79,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 16,
     paddingHorizontal: 10,
-    backgroundColor: '#fff', // White background for inputs
+    backgroundColor: '#fff',
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowOffset: { width: 0, height: 2 },
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   button: {
-    backgroundColor: '#007BFF', // Bootstrap primary color
+    backgroundColor: '#007BFF', 
     borderRadius: 8,
     paddingVertical: 12,
     alignItems: 'center',

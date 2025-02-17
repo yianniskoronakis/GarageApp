@@ -27,7 +27,7 @@ const CreateGarageScreen = () => {
   const [photos, setPhotos] = useState([]); 
   const [error, setError] = useState('');
   const navigation = useNavigation();
-  const [loading, setLoading] = useState(false); // Loading state
+  const [loading, setLoading] = useState(false); 
 
   const { createGarage } = useGarage();
 
@@ -37,7 +37,7 @@ const CreateGarageScreen = () => {
       return;
     }
 
-    setLoading(true); // Set loading to true while creating garage
+    setLoading(true); 
     try {
       const token = await AsyncStorage.getItem('token');
       const formData = new FormData();
@@ -58,7 +58,7 @@ const CreateGarageScreen = () => {
       console.log('FormData before sending:', formData);
       await createGarage(formData, token);
 
-      // Clear form after successful creation
+
       setPrice('');
       setAddress('');
       setsquaremeter('');
@@ -72,7 +72,7 @@ const CreateGarageScreen = () => {
       console.error('Error creating garage:', error.message);
       setError('Failed to create garage: ' + error.message);
     } finally {
-      setLoading(false); // Reset loading state
+      setLoading(false); 
     }
   };
 
@@ -127,7 +127,6 @@ const CreateGarageScreen = () => {
         onChangeText={setdescription} 
       />
       <Text style={styles.label}>Garage Type</Text>
-      {/* Εμφάνιση του "Close" αριστερά, Switch στο κέντρο και "Open" δεξιά */}
       <Text style={styles.label}>Close</Text>
       <Switch   
         value={garagetype}  
@@ -135,7 +134,7 @@ const CreateGarageScreen = () => {
       />
       <Text style={styles.label}>Open</Text>
 
-      {!garagetype && ( // Έλεγχος για το αν το garagetype είναι "true"
+      {!garagetype && ( 
         <TextInput 
         style={styles.input} 
         placeholder="Maxheight" 
@@ -164,7 +163,7 @@ const CreateGarageScreen = () => {
       <TouchableOpacity 
         style={styles.createButton} 
         onPress={handleCreateGarage} 
-        disabled={loading} // Disable button while loading
+        disabled={loading} 
       >
         {loading ? (
           <ActivityIndicator size="small" color="#ffffff" />
@@ -182,13 +181,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#f7f9fc', // Light background for better contrast
+    backgroundColor: '#f7f9fc',
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 24,
-    color: '#333', // Dark color for title
+    color: '#333', 
   },
   input: {
     width: '100%',
@@ -198,19 +197,19 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 16,
     paddingHorizontal: 10,
-    backgroundColor: '#ffffff', // White background for inputs
+    backgroundColor: '#ffffff', 
   },
   photoButton: {
     backgroundColor: '#007BFF',
     paddingVertical: 12,
     borderRadius: 10,
     marginVertical: 10,
-    width: '100%', // Full width for button
+    width: '100%', 
   },
   photoButtonText: {
     color: 'white',
     fontSize: 16,
-    textAlign: 'center', // Center text in button
+    textAlign: 'center', 
   },
   photoContainer: {
     flexDirection: 'row',
@@ -220,7 +219,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
-    marginHorizontal: 10, // Κενό μεταξύ του κειμένου και του switch
+    marginHorizontal: 10, 
   },
   photo: {
     width: 100,
@@ -236,13 +235,13 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
-    elevation: 2, // Elevation for Android shadow
+    elevation: 2, 
   },
   createButton: {
-    backgroundColor: '#28a745', // Green color for create button
+    backgroundColor: '#28a745', 
     paddingVertical: 12,
     borderRadius: 10,
-    width: '100%', // Full width for button
+    width: '100%', 
     marginTop: 20,
   },
   createButtonText: {

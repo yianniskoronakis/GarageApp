@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { verifyToken } = require('./auth'); // Διόρθωσε το path αν χρειάζεται
+const { verifyToken } = require('./auth'); 
 const Review = require('../models/Review');
 const Garage = require('../models/Garage');
 
@@ -16,7 +16,6 @@ router.get('/:garageId', async (req, res) => {
   });
   
 
-// POST: Προσθήκη νέου review
 router.post('/', verifyToken, async (req, res) => {
   const { garageId, rating, comment } = req.body;
 
@@ -25,7 +24,6 @@ router.post('/', verifyToken, async (req, res) => {
   }
 
   try {
-    // Έλεγχος αν υπάρχει ήδη review από τον ίδιο χρήστη
     const existingReview = await Review.findOne({ garage: garageId, user: req.user._id });
     if (existingReview) {
       return res.status(400).json({ error: 'You have already reviewed this garage.' });
@@ -65,7 +63,6 @@ router.delete('/:reviewId', async (req, res) => {
       return res.status(404).json({ error: 'Review not found' });
     }
 
-    // Αν θέλεις να υπολογίσεις ξανά τον μέσο όρο βαθμολογίας
     const reviews = await Review.find({ garage: deletedReview.garage });
     const averageRating = reviews.length
       ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
